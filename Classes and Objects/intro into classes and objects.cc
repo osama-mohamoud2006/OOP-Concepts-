@@ -3,19 +3,26 @@ using namespace std;
 
 class clsPerson
 {
+    // all members are accessible in class (even if it is private)
     // members ( private by default )
     string FirstName;
     string LastName;
     short Age;
     // method (function)
-    string FullName(){
-        return FirstName+ " "+LastName;
+    string FullName()
+    {
+        return FirstName + " " + LastName;
     }
 
 public:
     string PFirstName;
     string PLastName;
     short PAge;
+    //short Age; --> it defined perviously 
+    string PFullName()
+    {
+        return PFirstName + " " + PLastName;
+    }
 };
 
 int main()
@@ -25,5 +32,6 @@ int main()
     p1.PFirstName = "osama";
     p1.PLastName = "mohamoud";
     p1.PAge = 19;
-    //p1.FullName(); --> i couldn't access this method as it is private by default 
+    // p1.FullName(); --> i couldn't access this method as it is private by default
+    cout << p1.PFullName() << endl;
 }
