@@ -5,11 +5,11 @@ class clsPerson
 {
     // all members are accessible in class (even if it is private)
     // members ( private by default )
-    string FirstName;
+    string FirstName; // --> data member
     string LastName;
     short Age;
     // method (function)
-    string FullName()
+    string FullName() // --> member method 
     {
         return FirstName + " " + LastName;
     }
