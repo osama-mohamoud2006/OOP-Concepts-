@@ -4,7 +4,7 @@ using namespace std;
 class clsStudent
 {
 
-public: // make all data , method members are accessible
+public: // make all data , methods members are accessible
     // data members
     string FirstName;
     string LastName;
