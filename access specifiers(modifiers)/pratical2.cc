@@ -3,13 +3,13 @@ using namespace std;
 
 class clsJunoirs
 {
-private: // all members here will be accessible only in this class
-    int TallEqualtionForBoys(short age)
+private:                                // all members here will be accessible only in this class
+    int TallEqualtionForBoys(short age) // equation i don't any one to modify it
     {
         return 75 + (age * 5);
     }
 
-    int TallEqualtionForGirls(short age)
+    int TallEqualtionForGirls(short age) // equation i don't any one to modify it
     {
         return 74 + (age * 4.7);
     }
@@ -38,7 +38,7 @@ int main()
     Boy.TheTall();
 
     clsJunoirs Girl;
-    Girl.Gender='f';
-    Girl.Age=8;
+    Girl.Gender = 'f';
+    Girl.Age = 8;
     Girl.TheTall();
 }
