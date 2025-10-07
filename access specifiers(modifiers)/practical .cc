@@ -20,5 +20,8 @@ public: // all members here will be accessible everywhere
 
 int main()
 {
-    clsStudentData
+    clsStudentData Student1;
+    Student1.StudentName ="sama"; // access data member 
+    Student1.WelcomeTheStudent(); // access method
+    Student1.ShowDefaultAge(); // access method
 }
