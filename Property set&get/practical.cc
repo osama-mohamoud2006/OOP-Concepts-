@@ -9,6 +9,9 @@ private: // starting from now make the vars private don't make them accessible i
     short _Age = 0;
 
     public: 
+
+    // property set ( to set value)
+    void SetId(int ID){ _Id = id; // changed the _Id }
 };
 
 int main()
