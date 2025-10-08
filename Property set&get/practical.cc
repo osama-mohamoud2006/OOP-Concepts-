@@ -10,9 +10,9 @@ private: // starting from now make the vars private don't make them accessible i
 
 public:
     // property set ( to set value)
-    void SetId(int ID)
+    void SetId(int Id)
     {
-        _Id = id; // changed the _Id
+        _ID = Id; // changed the _Id
     }
     void SetAge(short Age)
     {
@@ -38,6 +38,17 @@ public:
     }
 };
 
-in main()
+int main()
 {
+    clsStudent Stu1;
+   // Stu1._Age;  --> iit is private var i cann't access it
+   /// i should use set property to assign value
+
+   // assigned values using method(set property)
+   Stu1.SetName("osama");
+   Stu1.SetId("24534");
+   Stu1.Age("19");
+
+   cout<<Stu1
+
 }
