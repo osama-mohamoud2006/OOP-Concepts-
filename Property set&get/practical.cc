@@ -8,12 +8,36 @@ private: // starting from now make the vars private don't make them accessible i
     string _Name = "";
     short _Age = 0;
 
-    public: 
-
+public:
     // property set ( to set value)
-    void SetId(int ID){ _Id = id; // changed the _Id }
+    void SetId(int ID)
+    {
+        _Id = id; // changed the _Id
+    }
+    void SetAge(short Age)
+    {
+        _Age = Age; // changed the _Age }
+    };
+    void SetName(string name)
+    {
+        _Name = name; // changed the _Name
+    }
+
+    // propert get (get the values)
+    int Id()
+    {
+        return _Id;
+    }
+    string Name()
+    {
+        return _Name;
+    }
+    short Age()
+    {
+        return _Age;
+    }
 };
 
-int main()
+in main()
 {
 }
