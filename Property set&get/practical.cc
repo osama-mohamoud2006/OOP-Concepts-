@@ -43,7 +43,7 @@ public:
 int main()
 {
     clsStudent Stu1;
-    // Stu1._Age;  --> iit is private var i cann't access it
+    // Stu1._Age;  --> it is private var i cann't access it
     /// i should use set property to assign value
 
     // assigned values using method(set property)
@@ -61,8 +61,6 @@ int main()
     cout << "ID: " << Stu1.GetId() << endl;
     cout << "Age: " << Stu1.GetAge() << endl;
 
-
-        // get values using get property
     cout << "Name: " << Stu2.GetName() << endl;
     cout << "ID: " << Stu2.GetId() << endl;
     cout << "Age: " << Stu2.GetAge() << endl;
