@@ -18,8 +18,9 @@ public:
     // property get
     string GetName()
     {
-        return _name;
+        return _name; 
     }
+    __declspec(property(get = GetName, put = SetName)) string FirstName; // wprks only with MSCV (ms compiler)
 
     // i want to make id read-only(i can access it but i cann't modify it)
     int GetId()
@@ -35,6 +36,10 @@ public:
 
 int main()
 {
+    clsStudent s2;
+    s2.FirstName= "Eman";
+    cout << s2.FirstName << endl;
+
     clsStudent s1;
     s1.SetName("mena");
     cout << s1.GetName() << endl;
