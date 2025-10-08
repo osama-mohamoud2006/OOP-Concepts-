@@ -20,7 +20,7 @@ public:
     {
         return _name; 
     }
-    __declspec(property(get = GetName, put = SetName)) string FirstName; // wprks only with MSCV (ms compiler)
+    __declspec(property(get = GetName, put = SetName)) string FirstName; // works only with MSCV (ms compiler)
 
     // i want to make id read-only(i can access it but i cann't modify it)
     int GetId()
