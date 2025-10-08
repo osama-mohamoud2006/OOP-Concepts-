@@ -21,7 +21,7 @@ public:
         return _name;
     }
 
-    // i want to make id read-only(i can access it but i cann't modify if)
+    // i want to make id read-only(i can access it but i cann't modify it)
     int GetId()
     {
         return _id; // so i can access it but i cann't modify it
