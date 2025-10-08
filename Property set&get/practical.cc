@@ -10,13 +10,6 @@ private: // starting from now make the vars private don't make them accessible i
     short _Age = 0;
 
 public:
-
-    vector<string> GetNameChangeHistory(string Name)
-    {
-        vector<string> StoreName;
-        if(name!=" ")StoreName.push_back(name);
-    }
-
     // property set ( to set value)
     void SetId(int Id)
     {
@@ -28,7 +21,7 @@ public:
     };
     void SetName(string name)
     {
-        GetNameChangeHistory(_name); // to store old values before changing it 
+
         _Name = name; // changed the _Name
     }
 
@@ -58,8 +51,19 @@ int main()
     Stu1.SetId(24533);
     Stu1.SetAge(19);
 
+    clsStudent Stu2;
+    Stu1.SetName("ahmed");
+    Stu1.SetId(22343);
+    Stu1.SetAge(16);
+
     // get values using get property
     cout << "Name: " << Stu1.GetName() << endl;
     cout << "ID: " << Stu1.GetId() << endl;
     cout << "Age: " << Stu1.GetAge() << endl;
+
+
+        // get values using get property
+    cout << "Name: " << Stu2.GetName() << endl;
+    cout << "ID: " << Stu2.GetId() << endl;
+    cout << "Age: " << Stu2.GetAge() << endl;
 }
