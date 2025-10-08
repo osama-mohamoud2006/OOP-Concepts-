@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 class clsStudent
@@ -25,10 +26,19 @@ public:
     {
         return _id; // so i can access it but i cann't modify it
     }
+
+    string ReturnStuData()
+    {
+        return _name + " " + to_string(_id);
+    }
 };
 
 int main()
 {
     clsStudent s1;
-    cout<<s1.GetId()<<endl;
+    s1.SetName("mena");
+    cout<<s1.GetName()<<endl;
+    cout << s1.GetId() << endl;
+    cout<<"the full data of this student is: "<<s1.ReturnStuData()<<endl;
+    
 }
