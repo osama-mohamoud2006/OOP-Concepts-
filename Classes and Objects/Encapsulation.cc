@@ -10,8 +10,8 @@ class clCpasule1
 {
 private: // private data/method members can be accessed only in this class
     int _x = 0;
-    int y = 0;
-    int input(string message)
+    int _y = 0;
+    int _input(string message)
     {
         int e = 0;
         cout << "\n"
@@ -21,14 +21,19 @@ private: // private data/method members can be accessed only in this class
     }
 
 public: // public data/method members can be accessed  in this class & and outside class
-    // get property
-    void GetX()
+    // set property
+    void SetX()
     {
-        x = input("Enter X: ");
+        _x = _input("Enter X: ");
     }
 
-    void GetY()
+    void setY()
     {
-        y = input("Enter y: ");
+        _y = _input("Enter y: ");
     }
+
+    // Get property
+
+    int GetX() { return _x; }
+    int GetY(){return _y;}
 };
