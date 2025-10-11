@@ -36,14 +36,16 @@ public: // public data/method members can be accessed  in this class & and outsi
 
     int GetX() { return _x; }
     int GetY() { return _y; }
+
+    int GetSum(){return _x+_y;}
 };
 
 int main()
 {
     clsSimpleSum SumOf2Nums;
 
-    SumOf2Nums.SetX("Enter X: ");
-     SumOf2Nums.SetY("Enter Y: ");
+    SumOf2Nums.SetX("Enter X: "); // input x
+    SumOf2Nums.SetY("Enter Y: "); // input y
 
-
+    cout<<"the sum of 2 nums is: "<<SumOf2Nums.GetSum()<<endl;
 }
