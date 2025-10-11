@@ -6,7 +6,7 @@
 #include <iostream>
 using namespace std;
 
-class clCpasule1
+class clsSimpleSum
 {
 private: // private data/method members can be accessed only in this class
     int _x = 0;
@@ -22,18 +22,28 @@ private: // private data/method members can be accessed only in this class
 
 public: // public data/method members can be accessed  in this class & and outside class
     // set property
-    void SetX()
+    void SetX(string message)
     {
-        _x = _input("Enter X: ");
+        _x = _input(message);
     }
 
-    void setY()
+    void SetY(string message)
     {
-        _y = _input("Enter y: ");
+        _y = _input(message);
     }
 
     // Get property
 
     int GetX() { return _x; }
-    int GetY(){return _y;}
+    int GetY() { return _y; }
 };
+
+int main()
+{
+    clsSimpleSum SumOf2Nums;
+
+    SumOf2Nums.SetX("Enter X: ");
+     SumOf2Nums.SetY("Enter Y: ");
+
+
+}
