@@ -1,0 +1,1 @@
+// all vars and methods into class 
