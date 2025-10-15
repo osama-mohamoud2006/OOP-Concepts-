@@ -4,12 +4,13 @@ using namespace std;
 class clsTest
 {
 private:
-    string _name;
+    string _name=" ";
 
-public: // conustractor is created by compiler by default , it always calling after obj is created and it is public (and should be public if you created it )
-    // conustractor
-    clsTest() // doesn't have data type , its name is the same as class name
+public: // constructor is function  created by compiler by default , it always calling after obj is created and it is public (and should be public if you created it )
+    // constructor
+    clsTest(string name) // doesn't have data type , its name is the same as class name
     {
+        _name=name;
     }
 
 public:
@@ -30,6 +31,7 @@ public:
 
 int main()
 {
-    clsTest t1;
+    clsTest t1("sama"); // i should assign value in the constructor (even i initlized the values)
+    t1.SetName("osama");
     t1.PrintName();
 }
