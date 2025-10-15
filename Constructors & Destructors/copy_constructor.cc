@@ -15,6 +15,11 @@ public:
         _name = name;
     }
 
+    clsTest(clsTest &OldObj) // copy constructor 
+    {
+        _age = OldObj._age; // make the new obj(2) have the same _age of old obj(1)
+    }
+
 public:
     void SetName(string name)
     {
@@ -40,7 +45,7 @@ private:
 public:
     void Print()
     {
-        cout << "the name is: " << GetName() << endl;
+        cout << "\n\nthe name is: " << GetName() << endl;
         cout << "the age is: " << GetAge() << endl;
     }
 };
@@ -50,4 +55,7 @@ int main()
     clsTest t1("osa", 19);
     t1.SetName("osama");
     t1.Print();
+
+    clsTest t2 = t1;
+    t2.Print(); // will print the same as t1.print()
 }
