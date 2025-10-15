@@ -8,7 +8,7 @@ private:
     short _age ; // i initlized the var 
 
 public: // constructor is function  created by compiler by default , it always calling after obj is created and it is public (and should be public if you created it )
-    // constructor
+    // constructor (overrided the default constructor )
     clsTest(string name, int age ) // doesn't have data type , its name is the same as class name
     {
         cout<<"\nCARD DATA\n";
