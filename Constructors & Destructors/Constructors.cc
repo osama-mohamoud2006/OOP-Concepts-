@@ -4,13 +4,14 @@ using namespace std;
 class clsTest
 {
 private:
-    string _name=" ";
+    string _name ;
+    short _age ; // i initlized the var 
 
 public: // constructor is function  created by compiler by default , it always calling after obj is created and it is public (and should be public if you created it )
     // constructor
-    clsTest(string name) // doesn't have data type , its name is the same as class name
+    clsTest() // doesn't have data type , its name is the same as class name
     {
-        _name=name;
+        cout<<"\nCARD DATA\n";
     }
 
 public:
@@ -18,20 +19,34 @@ public:
     {
         _name = name;
     }
-    private:
+
+    void SetAge(short age)
+    {
+        _age = age;
+    }
+
+private:
     string GetName()
     {
-        return _name ;
+        return _name;
     }
+
+    short GetAge()
+    {
+        return _age;
+    }
+
 public:
-    void PrintName(){
-        cout<<"the name is: "<<GetName()<<endl;
+    void Print()
+    {
+        cout << "the name is: " << GetName() << endl;
+        cout<<"the age is: "<<GetAge()<<endl;
     }
 };
 
 int main()
 {
-    clsTest t1("sama"); // i should assign value in the constructor (even i initlized the values)
-    t1.SetName("osama");
-    t1.PrintName();
+    clsTest t1; // i should assign value in the constructor (even i initlized the values)
+   // t1.SetName("osama");
+    t1.Print();
 }
