@@ -6,7 +6,8 @@ class clsTest
 private:
     string _name;
 
-public:       // don't forget constructor and destructor should be public
+    // don't forget constructor and destructor should be public
+public:
     clsTest() // constructor (will be calling  after i create obj)  // default constructor
     {
         cout << "\nHi iam constructor!\n";
@@ -24,17 +25,19 @@ public:       // don't forget constructor and destructor should be public
 
     // constructor can be overloaded
 
-    ~clsTest() // destructor (will be calling before object is destroyed.) , 
-    // you cann't use parameters with destructor 
-    // destructor cann't be overloaded 
+    ~clsTest() // destructor (will be calling before object is destroyed.) ,
+    // you cann't use parameters with destructor
+    // destructor cann't be overloaded
     {
         cout << "Hi iam destructor!\n";
     }
-
-
 };
+
+
 
 int main()
 {
-    clsTest t1("hello iam parametrized constructor");
+    clsTest t0;                                       // default
+    clsTest t1("hello iam parametrized constructor"); // parameterized
+    clsTest t2 = t1;                                  // copy
 }
