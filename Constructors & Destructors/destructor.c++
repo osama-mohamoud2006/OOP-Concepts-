@@ -45,17 +45,18 @@ void T2()
 {
     // syntax: data type * the name of the pointer(obj here)= new data type
 
-    clsTest *clsPtr = new clsTest("hello from  T2"); // destructor won't be called as i didn't use the delete to release the obj from memory (manual memory mangement,created obj in heap memory not stack using new )
+    clsTest *clsPtr = new clsTest("hello from  T2"); // destructor won't be called as i didn't use the delete to release the obj from memory
+    // (manual memory mangement,created obj in heap memory not stack using new )
 
-    delete clsPtr; //release the obj from memory 
+    delete clsPtr; // release the obj from memory
 }
 
 int main()
 {
-    //clsTest t0;                                       // default
+    clsTest t0;                                       // default
     clsTest t1("hello iam parametrized constructor"); // parameterized
-   clsTest t2 = t1;                                  // copy
-
-  //  T1();
+    clsTest t2 = t1;                                  // copy
+    cout << "\n____________________________\n";
+    T1();
     T2();
 }
