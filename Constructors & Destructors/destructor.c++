@@ -33,18 +33,26 @@ public:
     }
 };
 
-void T1(){
+void T1()
+{
     clsTest TestFromFunction("Hello from T1 function ,iam parametrized constructor!");
-    // after exiting from the function(after the function finshed the execution)
-    // the obj will be destroyed and destructor will be called
+    // After exiting from the function (after the function finishes execution),
+    // the object will be destroyed and the destructor will be called.
+}
+
+// dyanmic memory allocation
+void T2()
+{
+    // syntax: data type * the name of the pointer(obj here)= new data type
+    clsTest *clsPtr = new clsTest("hello from  T2"); // destructor won't be called as i didn't use the delete to release the obj from memory (manual memory mangement)
 }
 
 int main()
 {
     //clsTest t0;                                       // default
     //clsTest t1("hello iam parametrized constructor"); // parameterized
-    //clsTest t2 = t1;                                  // copy
+  //  clsTest t2 = t1;                                  // copy
 
-
-    void T1();
+  //  T1();
+    T2();
 }
