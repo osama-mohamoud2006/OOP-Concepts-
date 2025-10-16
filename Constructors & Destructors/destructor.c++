@@ -3,9 +3,9 @@ using namespace std;
 
 class clsTest
 {
-    private:
+private:
     string _name;
-    
+
 public:       // don't forget constructor and destructor should be public
     clsTest() // constructor (will be calling  after i create obj)  // default constructor
     {
@@ -17,18 +17,20 @@ public:       // don't forget constructor and destructor should be public
         cout << message << endl;
     }
 
-    clsTest(clsTest &OldObj) // copy constructor 
+    clsTest(clsTest &OldObj) // copy constructor
     {
-
+        _name = OldObj._name;
     }
 
-    ~clsTest() // destructor (will be calling before object is destroyed.)
+    // constructor can be overloaded
+
+    ~clsTest() // destructor (will be calling before object is destroyed.) , you cann't use parameters with destructor 
     {
-        cout << "\nHi iam destructor!\n";
+        cout << "Hi iam destructor!\n";
     }
 };
 
 int main()
 {
-    clsTest t1;
+    clsTest t1("hello iam parametrized constructor");
 }
