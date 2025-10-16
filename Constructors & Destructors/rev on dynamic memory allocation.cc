@@ -16,5 +16,5 @@ int main()
     cout << *ptr2 << endl;
 
     delete ptr2;
-     cout << *ptr2 << endl;
+     cout << *ptr2 << endl; // will print garbage value
 }
