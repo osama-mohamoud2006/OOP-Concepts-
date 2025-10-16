@@ -8,16 +8,18 @@ private:
     short _age;
 
 public:
-    clsTest(string name, int age)
+    clsTest(string name, int age) // parameterized constructor
     {
         cout << "\nCARD DATA\n";
         _age = age;
         _name = name;
     }
-
-    clsTest(clsTest &OldObj) // copy constructor 
+    // overloaded
+    clsTest(clsTest &OldObj) // copy constructor , you should use &
     {
-        _age = OldObj._age; // make the new obj(2) have the same _age of old obj(1)
+        // _age , _name consdired as old objs
+        _age = OldObj._age;   // make the new obj(2) have the same _age of old obj(1)
+        _name = OldObj._name; // make the new obj(2) have the same _name of old obj(1)
     }
 
 public:
