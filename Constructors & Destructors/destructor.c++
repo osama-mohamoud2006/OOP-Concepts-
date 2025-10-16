@@ -33,11 +33,18 @@ public:
     }
 };
 
-
+void T1(){
+    clsTest TestFromFunction("Hello from T1 function ,iam parametrized constructor!");
+    // after exiting from the function(after the function finshed the execution)
+    // the obj will be destroyed and destructor will be called
+}
 
 int main()
 {
-    clsTest t0;                                       // default
-    clsTest t1("hello iam parametrized constructor"); // parameterized
-    clsTest t2 = t1;                                  // copy
+    //clsTest t0;                                       // default
+    //clsTest t1("hello iam parametrized constructor"); // parameterized
+    //clsTest t2 = t1;                                  // copy
+
+
+    void T1();
 }
