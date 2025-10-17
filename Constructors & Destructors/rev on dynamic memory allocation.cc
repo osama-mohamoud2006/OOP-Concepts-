@@ -17,4 +17,8 @@ int main()
 
     delete ptr2;
      cout << *ptr2 << endl; // will print garbage value
+
+     int * arr= new int [6]; // arr 
+     
+
 }
