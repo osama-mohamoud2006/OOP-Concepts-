@@ -20,10 +20,14 @@ public:
     clsA() // constructor (must be public)
     {
         //_x = 0;// //you cann't initialize the static data member in class constructor
-        _x++;
+        // x++;
     }
 
 public:
+    void add()
+    {
+        _x++;
+    }
     void print()
     {
         cout << _x << endl;
@@ -35,12 +39,17 @@ int clsA::_x = 0; //----> intilization must be outside class and before main
 int main()
 {
     clsA x1, x2, x3, x4, x5;
-    // x1.print();//
-    // x1.print();//
-    // x1.print();//
-    x1.print(); // will print the same value as static member changes from one object to another not the same object
 
-// will print 5 for all as it static member
+    x1.add();
+    x1.print();
+
+    x1.add();
+    x1.print();
+
+    x1.add();
+    x1.print();
+
+    // will print 5 for all as it static member
     x2.print();
     x3.print();
     x4.print();
