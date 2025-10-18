@@ -3,17 +3,27 @@ using namespace std;
 
 // Rev on Static (in functions)
 
-void STaTiC()
+// void STaTiC()
+// {
+//     static int x = 0; // static var
+//     x++;
+//     cout << x << endl;
+// }
+
+class clsA
 {
-    static int x = 0;
-    x++;
-    cout << x << endl;
-}
+private:
+    // static int _x=0; // you cann't initialize the static data member in class
+
+    static int _x; // static member
+public:
+    clsA() // constructor (must be public)
+    {
+        _x = 0;
+    }
+};
 
 int main()
 {
-    STaTiC();
-    STaTiC();
-    STaTiC();
-    STaTiC();
+    clsA x1;
 }
