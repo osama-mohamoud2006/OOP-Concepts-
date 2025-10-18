@@ -38,7 +38,7 @@ int clsA::_x = 0; //----> intilization must be outside class and before main
 
 int main()
 {
-    clsA x1, x2, x3, x4, x5; // as constructor runs after each time i create object
+    clsA x1, x2, x3, x4, x5; // _x= 5 , as constructor runs after each time i create object and ad +1
 
     x1.add();
     x1.print(); //6 
@@ -49,7 +49,7 @@ int main()
     x1.add();
     x1.print();
 
-    // will print 5 for all as it static member
+    // will print 5 for all as it is static member
     x2.print();
     x3.print();
     x4.print();
