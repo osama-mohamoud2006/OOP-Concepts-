@@ -12,7 +12,7 @@ using namespace std;
 
 class clsA
 {
-private: //static member can be private and can be public 
+private: // static member can be private and can be public
     // static int _x=0; // you cann't initialize the static data member in class
 
     static int _x; // static member
@@ -38,8 +38,9 @@ int main()
     // x1.print();//
     // x1.print();//
     // x1.print();//
-    x1.print(); // will print the same value as static member changes from one object to another not the object
+    x1.print(); // will print the same value as static member changes from one object to another not the same object
 
+// will print 5 for all as it static member
     x2.print();
     x3.print();
     x4.print();
