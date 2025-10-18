@@ -20,7 +20,7 @@ public:
     clsA() // constructor (must be public)
     {
         //_x = 0;// //you cann't initialize the static data member in class constructor
-        // x++;
+        _x++;
     }
 
 public:
@@ -38,10 +38,10 @@ int clsA::_x = 0; //----> intilization must be outside class and before main
 
 int main()
 {
-    clsA x1, x2, x3, x4, x5;
+    clsA x1, x2, x3, x4, x5; // as constructor runs after each time i create object
 
     x1.add();
-    x1.print();
+    x1.print(); //6 
 
     x1.add();
     x1.print();
