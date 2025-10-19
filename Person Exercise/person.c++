@@ -88,15 +88,26 @@ public:
         cout << GetId << endl;
         cout << GetFirstName() << endl;
         cout << GetLastName() << endl;
-        cout<<PrintFullName()<<endl;
-        cout<<GetEmail()<<endl;
-        cout<<GetPhone()<<endl;
-           cout << "_______________________________\n";
+        cout << PrintFullName() << endl;
+        cout << GetEmail() << endl;
+        cout << GetPhone() << endl;
+        cout << "_______________________________\n";
     }
 
-    void SendMessage(string subject , string body){
-        cout<<"the following message to email: "<<GetEmail()<<endl;
-        cout<<"subject: "<<subject<<endl;
-        cout<<""
+    void SendMessage(string subject, string body)
+    {
+        cout << "the following message to email: " << GetEmail() << endl;
+        cout << "subject: " << subject << endl;
+        cout << "body: " << body << endl;
+    }
+
+    void SendSms(string subject)
+    {
+        cout << "the following message to number: " << GetPhone() << endl;
+        cout<<"the subject is: "<<subject<<endl;
+    }
+
+    ~clsPerson(){
+        cout<<"\n\aGood bye, i will die (me for sure object not you dump)!"<<endl;
     }
 };
