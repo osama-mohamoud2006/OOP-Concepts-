@@ -46,6 +46,7 @@ public:
     // if user wasn't initlized the object then i will force him to input data manually
     clsPerson()
     {
+        _Id = enter_postive_number("\aEnter Id: ");
         SetFirstName(read_string("please enter your first name: "));
         SetLastName(read_string("please enter your last name: "));
         SetEmail(read_string("please enter your email: "));
@@ -69,9 +70,33 @@ public:
     {
         return _Email;
     }
+    int GetId()
+    {
+        return _Id;
+    }
 
-    private:
-    string PrintFullName(){
-        return _FirstName+" "_L
+private:
+    string PrintFullName()
+    {
+        return _FirstName + " " + _LastName;
+    }
+
+public:
+    void PrintAllInfo()
+    {
+        cout << "_______________________________\n";
+        cout << GetId << endl;
+        cout << GetFirstName() << endl;
+        cout << GetLastName() << endl;
+        cout<<PrintFullName()<<endl;
+        cout<<GetEmail()<<endl;
+        cout<<GetPhone()<<endl;
+           cout << "_______________________________\n";
+    }
+
+    void SendMessage(string subject , string body){
+        cout<<"the following message to email: "<<GetEmail()<<endl;
+        cout<<"subject: "<<subject<<endl;
+        cout<<""
     }
 };
