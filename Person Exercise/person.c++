@@ -107,7 +107,12 @@ public:
         cout<<"the subject is: "<<subject<<endl;
     }
 
-    ~clsPerson(){
+    ~clsPerson(){ // destructor
         cout<<"\n\aGood bye, i will die (me for sure object not you dump)!"<<endl;
     }
 };
+
+int main(){
+    clsPerson p1;
+    p1.PrintAllInfo();
+}
