@@ -16,13 +16,25 @@ public:
     // parameterozed constructor
     clsPerson(int id, string FirstName, string LastName, string Email, string Phone)
     {
-        _Id=id;
-        _FirstName=FirstName;
-        _LastName=LastName;
-        _Email=Email;
-        _Phone= Phone;
+        _Id = id;
+        _FirstName = FirstName;
+        _LastName = LastName;
+        _Email = Email;
+        _Phone = Phone;
+    }
+    
+    // property set
+    void SetFirstName(string FirstName)
+    {
+        _FirstName = FirstName;
     }
 
-    
-    // if user wasn't initlized the object then i will force him to input data manually 
+    void SetLastName(string LastName)
+    {
+        _LastName = LastName;
+    }
+
+    void
+
+    // if user wasn't initlized the object then i will force him to input data manually
 };
