@@ -7,26 +7,28 @@ private:
     int _x;         // not-static data member
     static int _Sx; // static data member
 public:
-static int AddOneToX(){
-  //  return ++_x;// // you cann't use static data member with static method 
-  // so if you want to use non-static data member inside static method you should
-
-  clsM NonStatic; // create object
-  
-
-}
+    static int AddOneToX()
+    {
+        //  return ++_x;// // you cann't use static data member with static method
+        // so if you want to use non-static data member inside static method you should
+        cout << "Hi iam non-static data member inside static method!";
+        clsM NonStatic; // create object
+        return ++NonStatic._x;
+    }
     static int AddOne() // you cann't access this method if it is private
     {
         return ++_Sx; // it is static data member
     }
 };
 
-int clsM::_Sx=0; // you should initlize static var before main and outside class
+int clsM::_Sx = 0; // you should initlize static var before main and outside class
 
 int main()
 {
-    cout << clsM::AddOne() << endl; // i could call the static method without make any objects
+    cout << clsM::AddOne() << endl;    // i could call the static method without make any objects
+    cout << clsM::AddOneToX() << endl; // i could call the static method without make any objects(not-static data member here)
 
     clsM ex1;
-    cout<<ex1.AddOne()<<endl; // i could call the static method with objects normally
+    cout << ex1.AddOne() << endl;    // i could call the static method with objects normally
+    cout << ex1.AddOneToX() << endl; // i could call the static method with objects normally(not-static data member here)
 }
