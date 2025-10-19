@@ -116,6 +116,6 @@ int main(){
     clsPerson p1(25,"osama","mohamoud","wwwhdosama@lol.com","+20201214");
     p1.PrintAllInfo();
     p1.SendEmail("hi","hello i test this class!");
-    p1.SendSms("hi","i test send messages via sms!");
+    p1.SendSms("hi");
 
 }
