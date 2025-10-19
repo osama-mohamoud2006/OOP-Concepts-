@@ -52,5 +52,26 @@ public:
         SetPhone(read_string("please enter your phone: "));
     }
 
-    
+    // property get
+    string GetFirstName()
+    {
+        return _FirstName;
+    }
+    string GetLastName()
+    {
+        return _LastName;
+    }
+    string GetPhone()
+    {
+        return _Phone;
+    }
+    string GetEmail()
+    {
+        return _Email;
+    }
+
+    private:
+    string PrintFullName(){
+        return _FirstName+" "_L
+    }
 };
