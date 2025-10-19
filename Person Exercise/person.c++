@@ -22,7 +22,7 @@ public:
         _Email = Email;
         _Phone = Phone;
     }
-    
+
     // property set
     void SetFirstName(string FirstName)
     {
@@ -34,7 +34,23 @@ public:
         _LastName = LastName;
     }
 
-    void
+    void SetEmail(string Email)
+    {
+        _Email = Email;
+    }
+    void SetPhone(string Phone)
+    {
+        _Phone = Phone;
+    }
 
     // if user wasn't initlized the object then i will force him to input data manually
+    clsPerson()
+    {
+       SetFirstName(read_string("please enter your first name: "));
+       SetLastName(read_string("please enter your last name: "));
+       SetEmail(read_string("please enter your email: "));
+       SetPhone()
+
+
+    }
 };
