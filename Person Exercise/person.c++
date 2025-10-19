@@ -1,16 +1,28 @@
-#include<iostream>
-#include"E:\projects\my library\AllStuff.h"  
+#include <iostream>
+#include "E:\projects\my library\AllStuff.h"
 using namespace AllStuff;
 using namespace std;
 
-class clsPerson{
-    private:
-    int _Id=0;
-    string _FirstName="";
-    string _LastName="";
-    string _FullName="";
-    string _Email="";
-    string _Phone="";
+class clsPerson
+{
+private:
+    int _Id = 0;
+    string _FirstName = "";
+    string _LastName = "";
+    string _Email = "";
+    string _Phone = "";
+
+public:
+    // parameterozed constructor
+    clsPerson(int id, string FirstName, string LastName, string Email, string Phone)
+    {
+        _Id=id;
+        _FirstName=FirstName;
+        _LastName=LastName;
+        _Email=Email;
+        _Phone= Phone;
+    }
 
     
+    // if user wasn't initlized the object then i will force him to input data manually 
 };
