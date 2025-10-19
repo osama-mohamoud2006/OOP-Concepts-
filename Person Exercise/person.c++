@@ -128,7 +128,10 @@ int main(){
     p1.SendEmail("hi","hello i test this class!");
     p1.SendSms("hi");
 
-    clsPerson
+    clsPerson p2(26,"Eyan","Osama","eyan.ag@my.lol","+21903423");
+     p1.PrintAllInfo();
+    p1.SendEmail("hi","hello i test this class2!");
+    p1.SendSms("hi again!");
   
 
 }
