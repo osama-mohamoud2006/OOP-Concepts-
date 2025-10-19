@@ -85,7 +85,7 @@ public:
     void PrintAllInfo()
     {
         cout << "_______________________________\n";
-        cout << GetId << endl;
+        cout << GetId() << endl;
         cout << GetFirstName() << endl;
         cout << GetLastName() << endl;
         cout << PrintFullName() << endl;
@@ -94,7 +94,7 @@ public:
         cout << "_______________________________\n";
     }
 
-    void SendMessage(string subject, string body)
+    void SendEmail(string subject, string body)
     {
         cout << "the following message to email: " << GetEmail() << endl;
         cout << "subject: " << subject << endl;
@@ -113,6 +113,6 @@ public:
 };
 
 int main(){
-    clsPerson p1;
+    clsPerson p1(25,"osama","mohamoud","wwwhdosama@lol.com","+20201214");
     p1.PrintAllInfo();
-}
+    p1.SendEmail("hi","");
