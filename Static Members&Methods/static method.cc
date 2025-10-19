@@ -1,14 +1,19 @@
 #include <iostream>
 using namespace std;
 
-class clsM{
-private :
-int x ; // not-static data member
-static int x; // static data member
-
-
+class clsM
+{
+private:
+    int _x;         // not-static data member
+    static int _Sx; // static data member
+public:
+    static void AddOne() // you cann't access this method if it is private 
+    {
+        _Sx++; // it is static data member
+    }
 };
 
-int main(){
-
+int main()
+{
+    clsM::AddOne();
 }
