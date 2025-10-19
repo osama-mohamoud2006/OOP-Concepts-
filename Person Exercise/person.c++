@@ -53,7 +53,7 @@ public:
         SetLastName(read_string("please enter your last name: "));
         SetEmail(read_string("please enter your email: "));
         SetPhone(read_string("please enter your phone: "));
-         _HowManyOfPeople++;
+        _HowManyOfPeople++;
     }
 
     // property get
@@ -73,7 +73,7 @@ public:
     {
         return _Email;
     }
-    int GetId() //read only
+    int GetId() // read only
     {
         return _Id;
     }
@@ -83,8 +83,9 @@ public:
         return _FirstName + " " + _LastName;
     }
 
-    private:
-    int GetNumOfPeople(){
+
+   static int GetNumOfPeople()
+    {
         return _HowManyOfPeople;
     }
 
@@ -111,27 +112,29 @@ public:
     void SendSms(string TextSms)
     {
         cout << "\nthe following message to number: " << GetPhone() << endl;
-        cout<<"the subject is: "<<TextSms<<endl;
+        cout << "the subject is: " << TextSms << endl;
     }
 
-    ~clsPerson(){ // destructor
-        cout<<"The number of people is: "<<GetNumOfPeople()<<endl;
-        cout<<"\n\aGood bye, i will die (me for sure object not you dump)!"<<endl;
+    ~clsPerson()
+    { // destructor
+        cout << "The number of people is: " << GetNumOfPeople() << endl;
+        cout << "\n\aGood bye, i will die (me for sure object not you dump)!" << endl;
     }
 };
 
-int clsPerson::_HowManyOfPeople=0;
+int clsPerson::_HowManyOfPeople = 0;
 
-int main(){
-    clsPerson p1(25,"osama","mohamoud","wwwhdosama@lol.com","+20201214");
+int main()
+{
+    cout<<"\n"<<clsPerson::GetNumOfPeople()<<endl;
+    
+    clsPerson p1(25, "osama", "mohamoud", "wwwhdosama@lol.com", "+20201214");
     p1.PrintAllInfo();
-    p1.SendEmail("hi","hello i test this class!");
+    p1.SendEmail("hi", "hello i test this class!");
     p1.SendSms("hi");
 
-    clsPerson p2(26,"Eyan","Osama","eyan.ag@my.lol","+21903423");
-     p1.PrintAllInfo();
-    p1.SendEmail("hi","hello i test this class2!");
-    p1.SendSms("hi again!");
-  
-
+    clsPerson p2(26, "Eyan", "Osama", "eyan.ag@my.lol", "+21903423");
+    p2.PrintAllInfo();
+    p2.SendEmail("hi", "hello i test this class2!");
+    p2.SendSms("hi again!");
 }
