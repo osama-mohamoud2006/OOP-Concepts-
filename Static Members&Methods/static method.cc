@@ -9,6 +9,11 @@ private:
 public:
 static int AddOneToX(){
   //  return ++_x;// // you cann't use static data member with static method 
+  // so if you want to use non-static data member inside static method you should
+
+  clsM NonStatic; // create object
+  
+
 }
     static int AddOne() // you cann't access this method if it is private
     {
