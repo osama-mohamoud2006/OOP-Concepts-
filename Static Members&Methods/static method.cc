@@ -13,7 +13,8 @@ public:
         // so if you want to use non-static data member inside static method you should
         cout << "Hi iam non-static data member inside static method!";
         clsM NonStatic; // create object
-        return ++NonStatic._x;
+         int x= NonStatic._x= 0;
+        return ++x;
     }
     static int AddOne() // you cann't access this method if it is private
     {
