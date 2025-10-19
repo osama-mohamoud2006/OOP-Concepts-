@@ -83,8 +83,7 @@ public:
         return _FirstName + " " + _LastName;
     }
 
-
-   static int GetNumOfPeople()
+    static int GetNumOfPeople()
     {
         return _HowManyOfPeople;
     }
@@ -126,14 +125,15 @@ int clsPerson::_HowManyOfPeople = 0;
 
 int main()
 {
-    cout<<"\n"<<clsPerson::GetNumOfPeople()<<endl;
-    
+    cout << "\n"
+         << clsPerson::GetNumOfPeople() << endl;
+
     clsPerson p1(25, "osama", "mohamoud", "wwwhdosama@lol.com", "+20201214");
     p1.PrintAllInfo();
     p1.SendEmail("hi", "hello i test this class!");
     p1.SendSms("hi");
 
-    clsPerson p2(26, "Eyan", "Osama", "eyan.ag@my.lol", "+21903423");
+    clsPerson p2;
     p2.PrintAllInfo();
     p2.SendEmail("hi", "hello i test this class2!");
     p2.SendSms("hi again!");
