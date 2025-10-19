@@ -46,11 +46,11 @@ public:
     // if user wasn't initlized the object then i will force him to input data manually
     clsPerson()
     {
-       SetFirstName(read_string("please enter your first name: "));
-       SetLastName(read_string("please enter your last name: "));
-       SetEmail(read_string("please enter your email: "));
-       SetPhone()
-
-
+        SetFirstName(read_string("please enter your first name: "));
+        SetLastName(read_string("please enter your last name: "));
+        SetEmail(read_string("please enter your email: "));
+        SetPhone(read_string("please enter your phone: "));
     }
+
+    
 };
