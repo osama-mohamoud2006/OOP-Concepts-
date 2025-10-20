@@ -2,7 +2,7 @@
 #include "E:\projects\my library\AllStuff.h"
 using namespace AllStuff;
 using namespace std;
-
+// Super class,Base class
 class clsPerson
 {
 private:
@@ -123,7 +123,10 @@ public:
 
 int clsPerson::_HowManyOfPeople = 0;
 
+//Derived class , Sub class
+class clsEmployee : clsPerson{ // class clsEmployee will inherient 
 
+};
 
 int main()
 {
