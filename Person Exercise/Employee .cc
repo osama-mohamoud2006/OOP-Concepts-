@@ -150,5 +150,7 @@ int main()
     clsEmployee e1(10, "osama", "mja", "Software Enginner", "232jkd@b.com", "+10931313", 103091, "Software");
 
     e1.Print();
-    e1.
+    e1.SendEmail("\nwelcome","Hello: "+e1.GetFullName());
+    e1.SendSMS("\nYour code is: 2452452");
+
 }
