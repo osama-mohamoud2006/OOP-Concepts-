@@ -106,16 +106,6 @@ public:
         _Title = title;
     }
 
-    void SetEmail(string email)
-    {
-        _Email = email;
-    }
-
-    void SetPhone(string phone)
-    {
-        _Phone = phone;
-    }
-
     void SetSalary(int salary)
     {
         _Salary = salary;
@@ -126,33 +116,39 @@ public:
         _Department = Department;
     }
 
-    void Print(){
-        cout<<"\n------- Employee Info -------"<<endl;
-        cout<<"First Name: "<<_FirstName<<endl;
-        cout<<"Last Name: "<<_LastName<<endl;
-        cout<<"Full Name: "<<GetFullName()<<endl;
-        cout<<"Phone: "<<_Phone<<endl;
-        cout<<"Title: "<<_Title<<endl;
-        cout<<"Email: "<<_Email<<endl;
-        cout<<"Salary: "<<_Salary<<endl;
-        cout<<"Department: "<<_Department<<endl;
-        cout<<"ID: "<<_ID<<endl;
-        cout<<"-----------------------------"<<endl;
+    void Print()
+    {
+        cout << "\n------- Employee Info -------" << endl;
+        cout << "First Name: " << _FirstName << endl;
+        cout << "Last Name: " << _LastName << endl;
+        cout << "Full Name: " << GetFullName() << endl;
+        cout << "Phone: " << _Phone << endl;
+        cout << "Title: " << _Title << endl;
+        cout << "Email: " << _Email << endl;
+        cout << "Salary: " << _Salary << endl;
+        cout << "Department: " << _Department << endl;
+        cout << "ID: " << _ID << endl;
+        cout << "-----------------------------" << endl;
     }
 
-    void SendEmail(string subject , string body){
-        cout<<"\nThis Email was sent from: "<<_Email<<endl;
-        cout<<"Subject: "<<subject<<endl;
-        cout<<"Body: "<<body<<endl;
+    void SendEmail(string subject, string body)
+    {
+        cout << "\nThis Email was sent from: " << _Email << endl;
+        cout << "Subject: " << subject << endl;
+        cout << "Body: " << body << endl;
     }
 
-    void SendSMS(string message){
-        cout<<"\nThis message was sent from: "<<_Phone<<endl;
-        cout<<"Message: "<<message<<endl;
+    void SendSMS(string message)
+    {
+        cout << "\nThis message was sent from: " << _Phone << endl;
+        cout << "Message: " << message << endl;
     }
-    
 };
 
 int main()
 {
+    clsEmployee e1(10, "osama", "mja", "Software Enginner", "232jkd@b.com", "+10931313", 103091, "Software");
+
+    e1.Print();
+    e1.
 }
