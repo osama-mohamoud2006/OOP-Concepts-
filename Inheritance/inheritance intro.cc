@@ -14,7 +14,7 @@ private:
     static int _HowManyOfPeople;
 
 public:
-    // parameterozed constructor
+    // parameterozed constructor (currently you cann't use this constructor with derived class we will learn how to use it later )
     clsPerson(int id, string FirstName, string LastName, string Email, string Phone)
     {
         _Id = id;
@@ -45,15 +45,9 @@ public:
         _Phone = Phone;
     }
 
-    // if user wasn't initlized the object then i will force him to input data manually
+    //default constructor 
     clsPerson()
     {
-        _Id = enter_postive_number("\aEnter Id: ");
-        SetFirstName(read_string("please enter your first name: "));
-        SetLastName(read_string("please enter your last name: "));
-        SetEmail(read_string("please enter your email: "));
-        SetPhone(read_string("please enter your phone: "));
-        _HowManyOfPeople++;
     }
 
     // property get
@@ -124,9 +118,9 @@ public:
 int clsPerson::_HowManyOfPeople = 0;
 
 //Derived class , Sub class
-class clsEmployee : clsPerson{ // class clsEmployee will inherient clsPerson(i will take all things that the super class have)
+class clsEmployee :public clsPerson{ // class clsEmployee will inherient clsPerson(i will take all things that the super class have)
 
-    // Note : you cann't access private data members in main() 
+    // Note : you cann't access private data members, but i still can use them (get,set)
 
 };
 
@@ -142,5 +136,7 @@ int main()
     static int _HowManyOfPeople;
     */
    clsEmployee emp1;
+   emp1.SetFirstName("osama");
+   emp1.GetFirstName();
 
 }
