@@ -124,11 +124,23 @@ public:
 int clsPerson::_HowManyOfPeople = 0;
 
 //Derived class , Sub class
-class clsEmployee : clsPerson{ // class clsEmployee will inherient 
+class clsEmployee : clsPerson{ // class clsEmployee will inherient clsPerson(i will take all things that the super class have)
+
+    // Note : you cann't access private data members in main() 
 
 };
 
 int main()
 {
-   
+    /*
+    private data members 
+    int _Id = 0;
+    string _FirstName = "";
+    string _LastName = "";
+    string _Email = "";
+    string _Phone = "";
+    static int _HowManyOfPeople;
+    */
+   clsEmployee emp1;
+
 }
