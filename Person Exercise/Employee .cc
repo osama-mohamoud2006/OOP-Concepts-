@@ -127,9 +127,30 @@ public:
     }
 
     void Print(){
+        cout<<"\n------- Employee Info -------"<<endl;
         cout<<"First Name: "<<_FirstName<<endl;
-        cout<<"Last Name: "<_<Last_Name
+        cout<<"Last Name: "<<_LastName<<endl;
+        cout<<"Full Name: "<<GetFullName()<<endl;
+        cout<<"Phone: "<<_Phone<<endl;
+        cout<<"Title: "<<_Title<<endl;
+        cout<<"Email: "<<_Email<<endl;
+        cout<<"Salary: "<<_Salary<<endl;
+        cout<<"Department: "<<_Department<<endl;
+        cout<<"ID: "<<_ID<<endl;
+        cout<<"-----------------------------"<<endl;
     }
+
+    void SendEmail(string subject , string body){
+        cout<<"\nThis Email was sent from: "<<_Email<<endl;
+        cout<<"Subject: "<<subject<<endl;
+        cout<<"Body: "<<body<<endl;
+    }
+
+    void SendSMS(string message){
+        cout<<"\nThis message was sent from: "<<_Phone<<endl;
+        cout<<"Message: "<<message<<endl;
+    }
+    
 };
 
 int main()
