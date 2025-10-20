@@ -45,7 +45,7 @@ public:
         _Phone = Phone;
     }
 
-    //default constructor 
+    // default constructor
     clsPerson()
     {
     }
@@ -117,18 +117,20 @@ public:
 
 int clsPerson::_HowManyOfPeople = 0;
 
-//Derived class , Sub class
-class clsEmployee :public clsPerson{ // class clsEmployee will inherient clsPerson(i will take all things that the super class have)
+// Derived class , Sub class
+class clsEmployee : public clsPerson
+{ // class clsEmployee will inherient clsPerson(i will take all things that the super class have)
 
-    // we will know why i wrote public before super class 
+    // we will know why i wrote public before super class
 
     // Note : you cann't access private data members, but i still can use them (get,set)
 
+    // new features added + features from the super class/base class
 private:
     string _Title;
     int _Salary;
     string _Department;
-    
+
     // property get
     string GetTitle()
     {
@@ -158,14 +160,12 @@ private:
     {
         _Department = Department;
     }
-
 };
-
 
 int main()
 {
     /*
-    private data members 
+    private data members
     int _Id = 0;
     string _FirstName = "";
     string _LastName = "";
@@ -173,8 +173,11 @@ int main()
     string _Phone = "";
     static int _HowManyOfPeople;
     */
-   clsEmployee emp1;
-   emp1.SetFirstName("osama");
-   emp1.GetFirstName();
+    clsEmployee emp1;
+    emp1.SetFirstName("osama");
+    emp1.GetFirstName();
 
+    // Calling the print will not print anything from derived class, only base class
+    emp1.PrintAllInfo();
+    // therfore the print method will not serve me here, this problem will be solved in the next time
 }
