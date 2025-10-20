@@ -183,10 +183,10 @@ int main()
 
 
     clsDoctors d1; 
-    d1.SetFirstName("Dr:Mohmed");//method from Super CLass (clsPerson)
-    d1.SetLastName("Ahmed");//method from Super CLass (clsPerson)
+    d1.SetFirstName("Dr:Mohmed");//method from (clsPerson)
+    d1.SetLastName("Ahmed");//method from( clsPerson)
     d1.SetDepartment("Software Engineering"); // method in clsEmployee
-    d1.SetPhone("2489429824");// method in Super CLass (clsPerson)
+    d1.SetPhone("2893424");// method in (clsPerson)
 
 
 }
