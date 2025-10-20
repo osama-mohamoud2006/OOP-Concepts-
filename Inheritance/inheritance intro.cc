@@ -21,7 +21,6 @@ public:
         _LastName = LastName;
         _Email = Email;
         _Phone = Phone;
-        
     }
 
     // property set
@@ -76,7 +75,6 @@ public:
         return _FirstName + " " + _LastName;
     }
 
-
 public:
     void PrintAllInfo()
     {
@@ -102,8 +100,6 @@ public:
         cout << "\nthe following message to number: " << GetPhone() << endl;
         cout << "the subject is: " << TextSms << endl;
     }
-
- 
 };
 
 // Derived class , Sub class
@@ -152,8 +148,9 @@ public:
     }
 };
 
-class clsDoctors:public clsEmployee{ // class inherited clsEmployee
-    // it will inherit the clsPerson(From clsEmployee (sub class of clsPeron)) and clsEmployee
+class clsDoctors : public clsEmployee
+{ // class inherited clsEmployee
+  // it will inherit the clsPerson(From clsEmployee (sub class of clsPeron)) and clsEmployee
 };
 
 int main()
@@ -168,25 +165,25 @@ int main()
     static int _HowManyOfPeople;
     */
     clsEmployee emp1;
-    emp1.SetFirstName("osama");//method from Super CLass (clsPerson)
-    emp1.SetLastName("jak");//method from Super CLass (clsPerson)
+    emp1.SetFirstName("osama");                 // method from Super CLass (clsPerson)
+    emp1.SetLastName("jak");                    // method from Super CLass (clsPerson)
     emp1.SetDepartment("Software Engineering"); // method in clsEmployee
-    emp1.SetPhone("2489429824");// method in Super CLass (clsPerson)
+    emp1.SetPhone("2489429824");                // method in Super CLass (clsPerson)
 
-    cout<<"\nFull name is: "<<emp1.PrintFullName()<<endl; //method from Super CLass (clsPerson)
-    cout<<"Employee's department is: "<<emp1.GetDepartment()<<endl; // method in clsEmployee
-    cout<<"The Phone is: "<<emp1.GetPhone()<<endl; // method in Super CLass (clsPerson)
+    cout << "\nFull name is: " << emp1.PrintFullName() << endl;           // method from Super CLass (clsPerson)
+    cout << "Employee's department is: " << emp1.GetDepartment() << endl; // method in clsEmployee
+    cout << "The Phone is: " << emp1.GetPhone() << endl;                  // method in Super CLass (clsPerson)
 
     // Calling the print will not print anything from derived class, only base class
-   // emp1.PrintAllInfo();
+     emp1.PrintAllInfo();
     // therfore the print method will not serve me here, this problem will be solved in the next time
 
-
-    clsDoctors d1; 
-    d1.SetFirstName("Dr:Mohmed");//method from (clsPerson)
-    d1.SetLastName("Ahmed");//method from( clsPerson)
-    d1.SetDepartment("Software Engineering"); // method in clsEmployee
-    d1.SetPhone("2893424");// method in (clsPerson)
-
-
+    clsDoctors d1;
+    d1.SetFirstName("Dr:Mohmed");                                    // method from (clsPerson)
+    d1.SetLastName("Ahmed");                                        // method from( clsPerson)
+    d1.SetDepartment("Software Engineering");                      // method in clsEmployee
+    d1.SetPhone("2893424");                                        // method in (clsPerson)
+    cout << "\nFull name is: " << d1.PrintFullName() << endl;    // method from (clsPerson)
+    cout << "Employee's department is: " << d1.GetDepartment() << endl; // method in clsEmployee
+    cout << "The Phone is: " << d1.GetPhone() << endl;                 // method in (clsPerson)
 }
