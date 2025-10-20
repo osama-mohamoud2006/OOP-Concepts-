@@ -131,6 +131,7 @@ private:
     int _Salary;
     string _Department;
 
+public:
     // property get
     string GetTitle()
     {
@@ -177,8 +178,7 @@ int main()
     emp1.SetFirstName("osama");
     emp1.SetLastName("jak");
     emp1.SetDepartment("Software Engineering"); // method in clsEmployee
-    emp1.SetPhone("2489429824"); 
-
+    emp1.SetPhone("2489429824");
 
     // Calling the print will not print anything from derived class, only base class
     emp1.PrintAllInfo();
