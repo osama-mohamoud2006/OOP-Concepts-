@@ -175,7 +175,10 @@ int main()
     */
     clsEmployee emp1;
     emp1.SetFirstName("osama");
-    emp1.GetFirstName();
+    emp1.SetLastName("jak");
+    emp1.SetDepartment("Software Engineering"); // method in clsEmployee
+    emp1.SetPhone("2489429824"); 
+
 
     // Calling the print will not print anything from derived class, only base class
     emp1.PrintAllInfo();
