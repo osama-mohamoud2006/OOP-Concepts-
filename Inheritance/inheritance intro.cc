@@ -11,7 +11,6 @@ private:
     string _LastName = "";
     string _Email = "";
     string _Phone = "";
-    static int _HowManyOfPeople;
 
 public:
     // parameterozed constructor (currently you cann't use this constructor with derived class we will learn how to use it later )
@@ -22,7 +21,7 @@ public:
         _LastName = LastName;
         _Email = Email;
         _Phone = Phone;
-        _HowManyOfPeople++;
+        
     }
 
     // property set
@@ -77,10 +76,6 @@ public:
         return _FirstName + " " + _LastName;
     }
 
-    static int GetNumOfPeople()
-    {
-        return _HowManyOfPeople;
-    }
 
 public:
     void PrintAllInfo()
@@ -108,14 +103,8 @@ public:
         cout << "the subject is: " << TextSms << endl;
     }
 
-    ~clsPerson()
-    { // destructor
-        cout << "The number of people is: " << GetNumOfPeople() << endl;
-        cout << "\n\aGood bye, i will die (me for sure object not you dump)!" << endl;
-    }
+ 
 };
-
-int clsPerson::_HowManyOfPeople = 0;
 
 // Derived class , Sub class
 class clsEmployee : public clsPerson
@@ -163,6 +152,10 @@ public:
     }
 };
 
+class clsDoctors:public clsEmployee{ // class inherited clsEmployee
+    // it will inherit the clsPerson(From clsEmployee (sub class of clsPeron)) and clsEmployee
+};
+
 int main()
 {
     /*
@@ -178,12 +171,22 @@ int main()
     emp1.SetFirstName("osama");//method from Super CLass (clsPerson)
     emp1.SetLastName("jak");//method from Super CLass (clsPerson)
     emp1.SetDepartment("Software Engineering"); // method in clsEmployee
-    emp1.SetPhone("2489429824");// method in clsEmployee
+    emp1.SetPhone("2489429824");// method in Super CLass (clsPerson)
 
     cout<<"\nFull name is: "<<emp1.PrintFullName()<<endl; //method from Super CLass (clsPerson)
-    
+    cout<<"Employee's department is: "<<emp1.GetDepartment()<<endl; // method in clsEmployee
+    cout<<"The Phone is: "<<emp1.GetPhone()<<endl; // method in Super CLass (clsPerson)
 
     // Calling the print will not print anything from derived class, only base class
-    //emp1.PrintAllInfo();
+   // emp1.PrintAllInfo();
     // therfore the print method will not serve me here, this problem will be solved in the next time
+
+
+    clsDoctors d1; 
+    d1.SetFirstName("Dr:Mohmed");//method from Super CLass (clsPerson)
+    d1.SetLastName("Ahmed");//method from Super CLass (clsPerson)
+    d1.SetDepartment("Software Engineering"); // method in clsEmployee
+    d1.SetPhone("2489429824");// method in Super CLass (clsPerson)
+
+
 }
