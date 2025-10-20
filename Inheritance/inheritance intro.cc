@@ -175,12 +175,15 @@ int main()
     static int _HowManyOfPeople;
     */
     clsEmployee emp1;
-    emp1.SetFirstName("osama");
-    emp1.SetLastName("jak");
+    emp1.SetFirstName("osama");//method from Super CLass (clsPerson)
+    emp1.SetLastName("jak");//method from Super CLass (clsPerson)
     emp1.SetDepartment("Software Engineering"); // method in clsEmployee
-    emp1.SetPhone("2489429824");
+    emp1.SetPhone("2489429824");// method in clsEmployee
+
+    cout<<"\nFull name is: "<<emp1.PrintFullName()<<endl; //method from Super CLass (clsPerson)
+    
 
     // Calling the print will not print anything from derived class, only base class
-    emp1.PrintAllInfo();
+    //emp1.PrintAllInfo();
     // therfore the print method will not serve me here, this problem will be solved in the next time
 }
