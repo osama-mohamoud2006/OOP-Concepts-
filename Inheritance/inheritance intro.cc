@@ -120,9 +120,47 @@ int clsPerson::_HowManyOfPeople = 0;
 //Derived class , Sub class
 class clsEmployee :public clsPerson{ // class clsEmployee will inherient clsPerson(i will take all things that the super class have)
 
+    // we will know why i wrote public before super class 
+
     // Note : you cann't access private data members, but i still can use them (get,set)
 
+private:
+    string _Title;
+    int _Salary;
+    string _Department;
+    
+    // property get
+    string GetTitle()
+    {
+        return _Title;
+    }
+    int GetSalary()
+    {
+        return _Salary;
+    }
+    string GetDepartment()
+    {
+        return _Department;
+    }
+
+    // property set
+    void SetTitle(string title)
+    {
+        _Title = title;
+    }
+
+    void SetSalary(int salary)
+    {
+        _Salary = salary;
+    }
+
+    void SetDepartment(string Department)
+    {
+        _Department = Department;
+    }
+
 };
+
 
 int main()
 {
