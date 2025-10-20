@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 // - FullName()
@@ -38,9 +39,10 @@ public:
         return _FirstName + " " + _LastName;
     }
 
-  string GetFirstName(){
-    return _FirstName;
-  }
+    string GetFirstName()
+    {
+        return _FirstName;
+    }
 
     string GetLastName()
     {
@@ -62,18 +64,72 @@ public:
         return _Phone;
     }
 
-    int GetSalary(){
+    int GetSalary()
+    {
         return _Salary;
     }
 
-    int GetID(){
+    int GetID()
+    {
         return _ID;
     }
 
-    string GetDepartment(){
+    string GetDepartment()
+    {
         return _Department;
     }
 
+    // property set
+
+    void SetFirstName(string fname)
+    {
+        _FirstName = fname;
+    }
+
+    void SetLastName(string lname)
+    {
+        _LastName = lname;
+    }
+
+    void SetPhone(string phone)
+    {
+        _Phone = phone;
+    }
+
+    void SetEmail(string email)
+    {
+        _Email = email;
+    }
+
+    void SetTitle(string title)
+    {
+        _Title = title;
+    }
+
+    void SetEmail(string email)
+    {
+        _Email = email;
+    }
+
+    void SetPhone(string phone)
+    {
+        _Phone = phone;
+    }
+
+    void SetSalary(int salary)
+    {
+        _Salary = salary;
+    }
+
+    void SetDepartment(string Department)
+    {
+        _Department = Department;
+    }
+
+    void Print(){
+        cout<<"First Name: "<<_FirstName<<endl;
+        cout<<"Last Name: "<_<Last_Name
+    }
 };
 
 int main()
