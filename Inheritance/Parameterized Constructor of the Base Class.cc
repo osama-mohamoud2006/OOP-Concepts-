@@ -167,8 +167,13 @@ public:
     {
      _ManagerName=MangerName;
     }
-};
 
+    public:
+    static void SetManagerName(string Name){
+
+    }
+};
+string clsManagers::_ManagerName=""; // initlize the manager name (static string )
 int main()
 {
     // Note : values that assigned to data members in super class won't be inherited to the sub class
@@ -185,4 +190,8 @@ int main()
 
     cout << "\nFull name of employee is: " << emp1.PrintFullName() << endl;
     cout << "the deparment is: " << emp1.GetDepartment() << endl;
+
+
+    cout<<clsManagers m1::;
+
 }
