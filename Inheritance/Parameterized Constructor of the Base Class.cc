@@ -13,7 +13,7 @@ private:
     string _Phone = "";
 
 public:
-    // parameterozed constructor (currently you cann't use this constructor with derived class we will learn how to use it later )
+    // parameterozed constructor
     clsPerson(int id, string FirstName, string LastName, string Email, string Phone)
     {
         _Id = id;
@@ -41,11 +41,6 @@ public:
     void SetPhone(string Phone)
     {
         _Phone = Phone;
-    }
-
-    // default constructor
-    clsPerson()
-    {
     }
 
     // property get
@@ -104,13 +99,7 @@ public:
 
 // Derived class , Sub class
 class clsEmployee : public clsPerson
-{ // class clsEmployee will inherient clsPerson(i will take all things that the super class have)
-
-    // we will know why i wrote public before super class
-
-    // Note : you cann't access private data members, but i still can use them (get,set)
-
-    // new features added + features from the super class/base class
+{
 private:
     string _Title;
     int _Salary;
@@ -155,35 +144,6 @@ class clsDoctors : public clsEmployee
 
 int main()
 {
-    /*
-    private data members
-    int _Id = 0;
-    string _FirstName = "";
-    string _LastName = "";
-    string _Email = "";
-    string _Phone = "";
-    static int _HowManyOfPeople;
-    */
-    clsEmployee emp1;
-    emp1.SetFirstName("osama");                 // method from Super CLass (clsPerson)
-    emp1.SetLastName("jak");                    // method from Super CLass (clsPerson)
-    emp1.SetDepartment("Software Engineering"); // method in clsEmployee
-    emp1.SetPhone("2489429824");                // method in Super CLass (clsPerson)
-
-    cout << "\nFull name is: " << emp1.PrintFullName() << endl;           // method from Super CLass (clsPerson)
-    cout << "Employee's department is: " << emp1.GetDepartment() << endl; // method in clsEmployee
-    cout << "The Phone is: " << emp1.GetPhone() << endl;                  // method in Super CLass (clsPerson)
-
-    // Calling the print will not print anything from derived class, only base class
-    emp1.PrintAllInfo();
-    // therfore the print method will not serve me here, this problem will be solved in the next time
-
-    clsDoctors d1;
-    d1.SetFirstName("Dr:Mohmed");                                       // method from (clsPerson)
-    d1.SetLastName("Ahmed");                                            // method from( clsPerson)
-    d1.SetDepartment("Software Engineering");                           // method in clsEmployee
-    d1.SetPhone("2893424");                                             // method in (clsPerson)
-    cout << "\nFull name is: " << d1.PrintFullName() << endl;           // method from (clsPerson)
-    cout << "Employee's department is: " << d1.GetDepartment() << endl; // method in clsEmployee
-    cout << "The Phone is: " << d1.GetPhone() << endl;                  // method in (clsPerson)
+    clsPerson p1(10, "osama", "moahmoud", "weui@ol.com", "+2129023109"); // parametrized constructor in super class
+    p1.
 }
