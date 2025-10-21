@@ -106,6 +106,13 @@ private:
     string _Department;
 
 public:
+// sub-class(all arguments that assigned as parametrs in super class ):super-class(the name of that parameters )
+clsEmployee(int id , string Fname , string lname,string email,string phone):
+clsPerson()
+{
+
+}
+
     // property get
     string GetTitle()
     {
@@ -145,5 +152,12 @@ class clsDoctors : public clsEmployee
 int main()
 {
     clsPerson p1(10, "osama", "moahmoud", "weui@ol.com", "+2129023109"); // parametrized constructor in super class
-    p1.
+    p1.PrintFullName();
+    p1.PrintAllInfo();
+
+    //clsEmployee emp1;//
+    // i didn't make parametrized constructor in derived class(the default constructor of "clsEmployee" cannot be referenced -- it is a deleted function)
+
+
+  
 }
