@@ -150,7 +150,7 @@ public:
 
 class clsDoctors : public clsEmployee
 { // class inherited clsEmployee
-  // it will inherit the clsPerson(From clsEmployee (sub class of clsPeron)) and clsEmployee
+  // it will inherit the clsPerson(From clsEmployee (sub class of clsPerson)) and clsEmployee
 };
 
 int main()

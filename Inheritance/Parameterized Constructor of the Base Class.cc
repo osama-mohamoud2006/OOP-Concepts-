@@ -155,7 +155,7 @@ public:
 
 class clsManagers : public clsEmployee
 { // class inherited clsEmployee
-  // it will inherit the clsPerson(From clsEmployee (sub class of clsPeron)) and clsEmployee
+  // it will inherit the clsPerson(From clsEmployee (sub class of clsPerson)) and clsEmployee
 };
 
 int main()
@@ -174,4 +174,5 @@ int main()
 
     cout << "\nFull name of employee is: " << emp1.PrintFullName() << endl;
     cout<<"the deparment is: "<<emp1.GetDepartment()<<endl;
+    
 }
