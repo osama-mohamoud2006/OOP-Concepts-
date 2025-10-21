@@ -196,8 +196,8 @@ int main()
     cout << "\nFull name of employee is: " << emp1.PrintFullName() << endl;
     cout << "the deparment is: " << emp1.GetDepartment() << endl;
 
-   clsManagers::SetManagerName("Arya");
-   cout << clsManagers::GetMangerName()<<endl;
+   clsManagers::SetManagerName("Arya"); //static method
+   cout << "The manager's name is: "<<clsManagers::GetMangerName()<<endl; /* static method*/
 
  
 }
