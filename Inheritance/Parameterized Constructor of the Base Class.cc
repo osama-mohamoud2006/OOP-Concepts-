@@ -106,12 +106,10 @@ private:
     string _Department;
 
 public:
-// sub-class(all arguments that assigned as parametrs in super class ):super-class(the name of that parameters )
-clsEmployee(int id , string Fname , string lname,string email,string phone):
-clsPerson()
-{
-
-}
+    // sub-class(all arguments that assigned as parametrs in super class ):super-class(the name of that parameters )
+    clsEmployee(int id, string Fname, string lname, string email, string phone) : clsPerson(id, Fname, lname, email, phone) // sent the parameters to the paramertized constructor (in super class)
+    {
+    }
 
     // property get
     string GetTitle()
@@ -151,13 +149,17 @@ class clsDoctors : public clsEmployee
 
 int main()
 {
+    // Note : values that assigned to data members in super class won't be inheritned to the sub class
+
     clsPerson p1(10, "osama", "moahmoud", "weui@ol.com", "+2129023109"); // parametrized constructor in super class
     p1.PrintFullName();
     p1.PrintAllInfo();
 
-    //clsEmployee emp1;//
-    // i didn't make parametrized constructor in derived class(the default constructor of "clsEmployee" cannot be referenced -- it is a deleted function)
+    // clsEmployee emp1;//
+    //  i didn't make parametrized constructor in derived class(the default constructor of "clsEmployee" cannot be referenced -- it is a deleted function)
 
+    // initilzed the super class successfully(cuz i inherited it , and i used parametrized constructor in super class,so i should initialize the super class first )
+    clsEmployee emp1(10, "E/jack", "olo", "wyhyu@pop.com", "+2982394");
 
-  
+    cout << "\nFull name of employee is: " << emp1.PrintFullName() << endl;
 }
