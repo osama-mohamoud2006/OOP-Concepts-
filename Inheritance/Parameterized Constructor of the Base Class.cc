@@ -6,7 +6,11 @@ using namespace std;
 class clsPerson
 {
 private:
-  
+    int _Id = 0;
+    string _FirstName = "";
+    string _LastName = "";
+    string _Email = "";
+    string _Phone = "";
 
 public:
     // parameterozed constructor
