@@ -10,8 +10,7 @@ private:
     int _Id = 0;
     string _FirstName = "";
     string _LastName = "";
-    string _Email = "";
-    string _Phone = "";
+
 
 public:
     // parameterozed constructor (currently you cann't use this constructor with derived class we will learn how to use it later )
@@ -42,15 +41,6 @@ public:
         _LastName = LastName;
     }
 
-    void SetEmail(string Email)
-    {
-        _Email = Email;
-    }
-    void SetPhone(string Phone)
-    {
-        _Phone = Phone;
-    }
-
     // default constructor
     clsPerson()
     {
@@ -65,14 +55,7 @@ public:
     {
         return _LastName;
     }
-    string GetPhone()
-    {
-        return _Phone;
-    }
-    string GetEmail()
-    {
-        return _Email;
-    }
+
     int GetId() // read only
     {
         return _Id;
@@ -91,9 +74,37 @@ public:
         cout << "First name: " << GetFirstName() << endl;
         cout << "Last Name: " << GetLastName() << endl;
         cout << "Full Name: " << PrintFullName() << endl;
-        cout << "Email: " << GetEmail() << endl;
-        cout << "Phone: " << GetPhone() << endl;
-        // cout << "_______________________________\n";
+        // cout << "Email: " << GetEmail() << endl;
+        // cout << "Phone: " << GetPhone() << endl;
+        // // cout << "_______________________________\n";
+    }
+};
+
+class clsConnection
+{
+private:
+    string _Email = "";
+    string _Phone = "";
+
+public:
+    void SetEmail(string Email)
+    {
+        _Email = Email;
+    }
+    void SetPhone(string Phone)
+    {
+        _Phone = Phone;
+    }
+
+    // get
+    string GetEmail()
+    {
+        return _Email;
+    }
+
+    string GetPhone()
+    {
+        return _Phone;
     }
 
     void SendEmail(string subject, string body)
@@ -122,16 +133,34 @@ private:
     string _mainProgrammingLan;
 
 public:
-// prametrized construtor to intialize the super class and the sub class
+    // prametrized construtor to intialize the super class and the sub class
     clsPro(int id, string FirstName, string LastName, string Email, string Phone,
            string title, int salary, string deparment, string mainProgrammingLan) : clsPerson(id, FirstName, LastName, Email, Phone)
     {
         _title = title;
-        _salary =salary;
-        _department=deparment;
-        _mainProgrammingLan=mainProgrammingLan;
+        _salary = salary;
+        _department = deparment;
+        _mainProgrammingLan = mainProgrammingLan;
     }
 
+    // set
+    void SetSalary(int salary)
+    {
+        _salary = salary;
+    }
 
-    void SetSalary()
+    void SetTitle(string title)
+    {
+        _title = title;
+    }
+
+    void SetDepartment(string department)
+    {
+        _department = department;
+    }
+
+    void SetProLan(string PL)
+    {
+        _mainProgrammingLan = PL;
+    }
 };
