@@ -64,10 +64,42 @@ private: // I couldn't access them as they are private data members
         // clsPersonInfo:: You can only access public & protected member methods and data members
 
         // get full name, get id
-        // is protected (access specifiers) i could acsess them here as i use them
+        // is protected (access specifiers) i could access them here as i use them
         // in  inherited class
 
         cout << "The full name is: " << GetFullName() << endl;
         cout << "The Id is: " << GetID() << endl;
     }
 };
+
+class clsIamNonInheritedClass
+{
+    /*
+private: // I couldn't access them as they are private data members
+string _FirstName;
+string _LastName;
+string _ID;
+
+  */
+    // clsPersonInfo:: You can only access public methods and data members
+
+    // get full name, get id
+    // is protected (access specifiers) i couldn't access them here as i don't use them
+    // in  inherited class
+
+public:
+    void print()
+    {
+        clsPersonInfo i("", "", "");
+        i.SetFirstName("");
+        i.SetID("");
+        i.SetLastName("");
+        // you cann't access the other method & data memebrs
+        // note : you  cann't access protected methods here , 
+        //you can access them in inherited class only
+    }
+};
+
+int  main(){
+   
+}
