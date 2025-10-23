@@ -127,9 +127,12 @@ public:
         _Department = department;
         _Salary = salary;
         _Title = title;
+         c.SetEmail(Email);
+        c.SetPhone(Phone);
     }
 
 private:
+clsConnection c;
     string _Title;
     int _Salary;
     string _Department;
@@ -180,30 +183,25 @@ public:
 
 
 // sub class of cls person
-class clsPro : public clsPerson
+class clsPro : public clsEmployee
 {
     // title , salary , department , main programming language
 
 private:
-    string _title;
-    int _salary;
-    string _department;
     string _mainProgrammingLan;
-    clsConnection c;
+    
 
 public:
     // prametrized construtor to intialize the super class and the sub class
-    clsPro(int id, string FirstName, string LastName, string title,
-           int salary, string deparment, string mainProgrammingLan, // for this class
-           string Email, string Phone)                              // for the connection class
-        : clsPerson(id, FirstName, LastName)
+    clsPro(int id, string FirstName, string LastName, string Email, string Phone,
+                string department = "", int salary = 0, 
+                string title = "",
+            string mainProgrammingLan )     // for the dev-class                        
+        : clsEmployee(id, FirstName, LastName,Email,Phone,department,salary,title)
     {
 
-        c.SetEmail(Email);
-        c.SetPhone(Phone);
-        _title = title;
-        _salary = salary;
-        _department = deparment;
+       
+       
         _mainProgrammingLan = mainProgrammingLan;
     }
 
