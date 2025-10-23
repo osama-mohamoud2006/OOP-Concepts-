@@ -113,19 +113,25 @@ public:
 // sub class of cls person
 class clsPro : clsPerson
 {
-// title , salary , department , main programming language 
+    // title , salary , department , main programming language
 
-    private :
+private:
     string _title;
-    int _salary ;
+    int _salary;
     string _department;
     string _mainProgrammingLan;
 
-    public:
+public:
+// prametrized construtor to intialize the super class and the sub class
     clsPro(int id, string FirstName, string LastName, string Email, string Phone,
-    string title ,int salary , string deparment):
-    clsPerson(id,FirstName, LastName , Email , Phone)
+           string title, int salary, string deparment, string mainProgrammingLan) : clsPerson(id, FirstName, LastName, Email, Phone)
     {
-
+        _title = title;
+        _salary =salary;
+        _department=deparment;
+        _mainProgrammingLan=mainProgrammingLan;
     }
+
+
+    void SetSalary()
 };
