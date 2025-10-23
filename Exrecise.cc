@@ -68,51 +68,48 @@ public:
         // cout << "Phone: " << GetPhone() << endl;
         // // cout << "_______________________________\n";
     }
-
-    
 };
 
 // All members here are static
 class clsConnection
 {
 private:
-    static string _Email;
-    static string _Phone;
+    string _Email;
+    string _Phone;
 
 public:
-    static void RestEveryThing()
+    void SetEmail(string email)
     {
-        _Email = "";
-        _Phone = "";
+
+        _Email = email;
     }
-    static void SetEmail(string Email)
+    void SetPhone(string Phone)
     {
-        _Email = Email;
-    }
-    static void SetPhone(string Phone)
-    {
+
         _Phone = Phone;
     }
 
     // get
-    static string GetEmail()
+    string GetEmail()
     {
+
         return _Email;
     }
 
-    static string GetPhone()
+    string GetPhone()
     {
+
         return _Phone;
     }
 
-    static void SendEmail(string subject, string body)
+    void SendEmail(string subject, string body)
     {
         cout << "\nthe following message to email: " << GetEmail() << endl;
         cout << "subject: " << subject << endl;
         cout << "body: " << body << endl;
     }
 
-    static void SendSms(string TextSms)
+    void SendSms(string TextSms)
     {
         cout << "\nthe following message to number: " << GetPhone() << endl;
         cout << "the subject is: " << TextSms << endl;
@@ -129,6 +126,7 @@ private:
     int _salary;
     string _department;
     string _mainProgrammingLan;
+    clsConnection c;
 
 public:
     // prametrized construtor to intialize the super class and the sub class
@@ -137,9 +135,9 @@ public:
            string Email, string Phone)                              // for the connection class
         : clsPerson(id, FirstName, LastName)
     {
-        clsConnection::RestEveryThing();
-        clsConnection::SetEmail(Email);
-        clsConnection::SetPhone(Phone);
+
+        c.SetEmail(Email);
+        c.SetPhone(Phone);
         _title = title;
         _salary = salary;
         _department = deparment;
@@ -193,8 +191,8 @@ public:
     void PrintAllInfo()
     {
         clsPerson::PrintAllInfo(); // call the print function in super class
-        cout << "The Email is: " << clsConnection::GetEmail() << endl;
-        cout << "The Phone num is: " << clsConnection::GetPhone() << endl;
+        cout << "The Email is: " <<c.GetEmail() << endl;
+        cout << "The Phone num is: " << c.GetPhone() << endl;
         cout << "The Department is: " << GetDeparment() << endl;
         cout << "The Title is: " << GetTitle() << endl;
         cout << "The Salary is: " << GetSalary() << endl;
@@ -202,20 +200,12 @@ public:
     }
 };
 
-
-// intialize the staric members in clsConnection
-string clsConnection::_Email = "";
-string clsConnection::_Phone = "";
-
 int main()
 {
 
-    clsPro P1(246, "Akari", "lua", "Senior-Mobile Development", 10000, "SW", "C++,Java , Swift", "akari@lo.com", "+29030234");
+    clsPro P1(1, "Osama", "Ali", "Dev", 5000, "IT", "C++", "osama@mail.com", "123");
+    clsPro P2(2, "Omar", "Tarek", "Tester", 4000, "QA", "Python", "omar@mail.com", "456");
 
     P1.PrintAllInfo();
-    cout << "\n\n\n";
-
-    clsPro P2(123, "Aki", "la", "Mid-Mobile Development", 10000, "SW", "C++,Java , Swift", "aki@po.com", "+202384244");
-
     P2.PrintAllInfo();
 }
