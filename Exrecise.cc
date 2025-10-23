@@ -12,7 +12,7 @@ private:
     string _LastName = "";
 
 public:
-    // parameterozed constructor (currently you cann't use this constructor with derived class we will learn how to use it later )
+    // parameterozed constructor
     clsPerson(int id, string FirstName, string LastName)
     {
         _Id = id;
@@ -118,7 +118,7 @@ public:
 };
 
 // sub class of cls person
-class clsPro : clsPerson
+class clsPro : public clsPerson
 {
     // title , salary , department , main programming language
 
@@ -131,13 +131,13 @@ private:
 public:
     // prametrized construtor to intialize the super class and the sub class
     clsPro(int id, string FirstName, string LastName, string title,
-         int salary,string deparment, string mainProgrammingLan,// for this class
-        string Email , string Phone) // for the connection class  
+           int salary, string deparment, string mainProgrammingLan, // for this class
+           string Email, string Phone)                              // for the connection class
         : clsPerson(id, FirstName, LastName)
     {
         clsConnection::RestEveryThing();
         clsConnection::SetEmail(Email);
-        clsConnection::SetPhone(Phone); 
+        clsConnection::SetPhone(Phone);
         _title = title;
         _salary = salary;
         _department = deparment;
@@ -191,13 +191,12 @@ public:
     void PrintAllInfo()
     {
         clsPerson::PrintAllInfo(); // call the print function in super class
-        cout<<"The email is: "<<clsConnection::GetEmail()<<endl;
-        cout<<"The phone num is: "<<clsConnection::GetPhone()<<endl;
-        cout<<"The department is: "<<GetDeparment()<<endl;
-        cout<<"The title is: "<<GetTitle()<<endl;
-        cout<<"The salary is: "<<GetSalary()<<endl;
-        cout<<"The main programming lang is: "<<GetMainProgrammingLan()<<endl;
-
+        cout << "The Email is: " << clsConnection::GetEmail() << endl;
+        cout << "The Phone num is: " << clsConnection::GetPhone() << endl;
+        cout << "The Department is: " << GetDeparment() << endl;
+        cout << "The Title is: " << GetTitle() << endl;
+        cout << "The Salary is: " << GetSalary() << endl;
+        cout << "The Main programming lang is: " << GetMainProgrammingLan() << endl;
     }
 };
 
@@ -207,6 +206,13 @@ string clsConnection::_Phone = "";
 
 int main()
 {
-    clsPro P1;
-    
+
+    clsPro P1(246, "Akari", "lua", "Senior-Mobile Development", 10000, "SW", "C++,Java , Swift", "akari@lo.com", "+29030234");
+
+    P1.PrintAllInfo();
+    cout << "\n\n\n";
+
+    clsPro P2(123, "Aki", "la", "Mid-Mobile Development", 10000, "SW", "C++,Java , Swift", "aki@po.com", "+202384244");
+
+    P2.PrintAllInfo();
 }
