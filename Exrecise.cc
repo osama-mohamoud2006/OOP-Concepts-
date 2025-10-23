@@ -68,6 +68,8 @@ public:
         // cout << "Phone: " << GetPhone() << endl;
         // // cout << "_______________________________\n";
     }
+
+    
 };
 
 // All members here are static
@@ -199,6 +201,7 @@ public:
         cout << "The Main programming lang is: " << GetMainProgrammingLan() << endl;
     }
 };
+
 
 // intialize the staric members in clsConnection
 string clsConnection::_Email = "";
