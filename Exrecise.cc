@@ -11,18 +11,8 @@ private:
     string _FirstName = "";
     string _LastName = "";
 
-
 public:
     // parameterozed constructor (currently you cann't use this constructor with derived class we will learn how to use it later )
-    clsPerson(int id, string FirstName, string LastName, string Email, string Phone)
-    {
-        _Id = id;
-        _FirstName = FirstName;
-        _LastName = LastName;
-        _Email = Email;
-        _Phone = Phone;
-    }
-
     clsPerson(int id, string FirstName, string LastName)
     {
         _Id = id;
@@ -80,41 +70,47 @@ public:
     }
 };
 
+// All members here are static
 class clsConnection
 {
 private:
-    string _Email = "";
-    string _Phone = "";
+    static string _Email;
+    static string _Phone;
 
 public:
-    void SetEmail(string Email)
+    static void RestEveryThing()
+    {
+        _Email = "";
+        _Phone = "";
+    }
+    static void SetEmail(string Email)
     {
         _Email = Email;
     }
-    void SetPhone(string Phone)
+    static void SetPhone(string Phone)
     {
         _Phone = Phone;
     }
 
     // get
-    string GetEmail()
+    static string GetEmail()
     {
         return _Email;
     }
 
-    string GetPhone()
+    static string GetPhone()
     {
         return _Phone;
     }
 
-    void SendEmail(string subject, string body)
+    static void SendEmail(string subject, string body)
     {
         cout << "\nthe following message to email: " << GetEmail() << endl;
         cout << "subject: " << subject << endl;
         cout << "body: " << body << endl;
     }
 
-    void SendSms(string TextSms)
+    static void SendSms(string TextSms)
     {
         cout << "\nthe following message to number: " << GetPhone() << endl;
         cout << "the subject is: " << TextSms << endl;
@@ -134,9 +130,10 @@ private:
 
 public:
     // prametrized construtor to intialize the super class and the sub class
-    clsPro(int id, string FirstName, string LastName, string Email, string Phone,
-           string title, int salary, string deparment, string mainProgrammingLan) : clsPerson(id, FirstName, LastName, Email, Phone)
+    clsPro(int id, string FirstName, string LastName, string title, int salary, string deparment, string mainProgrammingLan)
+        : clsPerson(id, FirstName, LastName)
     {
+        clsConnection::RestEveryThing();
         _title = title;
         _salary = salary;
         _department = deparment;
@@ -163,4 +160,35 @@ public:
     {
         _mainProgrammingLan = PL;
     }
+
+    /// get
+
+    string GetTitle()
+    {
+        return _title;
+    }
+
+    string GetDeparment()
+    {
+        return _department;
+    }
+
+    int GetSalary()
+    {
+        return _salary;
+    }
+
+    string GetMainProgrammingLan(){
+        return _mainProgrammingLan;
+    }
+
+    void PRin
 };
+
+// intialize the staric members in clsConnection
+string clsConnection::_Email = "";
+string clsConnection::_Phone = "";
+
+int main()
+{
+}
