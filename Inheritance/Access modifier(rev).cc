@@ -95,11 +95,14 @@ public:
         i.SetID("");
         i.SetLastName("");
         // you cann't access the other method & data memebrs
-        // note : you  cann't access protected methods here , 
-        //you can access them in inherited class only
+        // note : you  cann't access protected methods here ,
+        // you can access them in inherited class only
     }
 };
 
-int  main(){
-   
+int main()
+{
+    clsPrintInfo P1("osama", "mohamoud", "15126");
+    P1.Print();
+    // you cann't access the private & protected data members here
 }
