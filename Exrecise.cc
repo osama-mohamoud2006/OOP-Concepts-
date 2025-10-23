@@ -130,10 +130,14 @@ private:
 
 public:
     // prametrized construtor to intialize the super class and the sub class
-    clsPro(int id, string FirstName, string LastName, string title, int salary, string deparment, string mainProgrammingLan)
+    clsPro(int id, string FirstName, string LastName, string title,
+         int salary,string deparment, string mainProgrammingLan,// for this class
+        string Email , string Phone) // for the connection class  
         : clsPerson(id, FirstName, LastName)
     {
         clsConnection::RestEveryThing();
+        clsConnection::SetEmail(Email);
+        clsConnection::SetPhone(Phone); 
         _title = title;
         _salary = salary;
         _department = deparment;
@@ -178,11 +182,23 @@ public:
         return _salary;
     }
 
-    string GetMainProgrammingLan(){
+    string GetMainProgrammingLan()
+    {
         return _mainProgrammingLan;
     }
 
-    void PRin
+    // override
+    void PrintAllInfo()
+    {
+        clsPerson::PrintAllInfo(); // call the print function in super class
+        cout<<"The email is: "<<clsConnection::GetEmail()<<endl;
+        cout<<"The phone num is: "<<clsConnection::GetPhone()<<endl;
+        cout<<"The department is: "<<GetDeparment()<<endl;
+        cout<<"The title is: "<<GetTitle()<<endl;
+        cout<<"The salary is: "<<GetSalary()<<endl;
+        cout<<"The main programming lang is: "<<GetMainProgrammingLan()<<endl;
+
+    }
 };
 
 // intialize the staric members in clsConnection
@@ -191,4 +207,6 @@ string clsConnection::_Phone = "";
 
 int main()
 {
+    clsPro P1;
+    
 }
