@@ -195,7 +195,8 @@ public:
     clsPro(int id, string FirstName, string LastName, string Email, string Phone,
            string department = "", int salary = 0,
            string title = "",
-           string mainProgrammingLan) // for the dev-class
+           string mainProgrammingLan="") // for the dev-class
+
         : clsEmployee(id, FirstName, LastName, Email, Phone, department, salary, title)
     {
         _mainProgrammingLan = mainProgrammingLan;
@@ -224,11 +225,9 @@ public:
 int main()
 {
 
-    clsPro P1(1, "Osama", "Ali", "Dev", 5000, "IT", "C++", "osama@mail.com", "123");
-    clsPro P2(2, "Omar", "Tarek", "Tester", 4000, "QA", "Python", "omar@mail.com", "456");
-
+    
+    clsPro P1(1,"Arya","lua","ara@u.com","+12322134","SW",10000,"Seniro-Mobile Dev","Kotlin , C++ , Java , React");
+    
     P1.PrintAllInfo();
-    P1.GetId();
 
-    P2.PrintAllInfo();
 }
