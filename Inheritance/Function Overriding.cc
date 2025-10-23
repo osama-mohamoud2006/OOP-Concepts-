@@ -85,7 +85,7 @@ public:
         cout << PrintFullName() << endl;
         cout << GetEmail() << endl;
         cout << GetPhone() << endl;
-       // cout << "_______________________________\n";
+        // cout << "_______________________________\n";
     }
 
     void SendEmail(string subject, string body)
@@ -104,13 +104,16 @@ public:
 
 // Derived class , Sub class
 class clsEmployee : public clsPerson
-{ 
-    public:
+{
+public:
     clsEmployee(int id, string FirstName, string LastName, string Email, string Phone,
-    string department="" , int salary=0 , string title =""):
-    clsPerson(id , FirstName ,LastName, Email , Phone ){
-
+                string department = "", int salary = 0, string title = "") : clsPerson(id, FirstName, LastName, Email, Phone)
+    {
+        _Department = department;
+        _Salary = salary;
+        _Title = title;
     }
+
 private:
     string _Title;
     int _Salary;
@@ -147,14 +150,15 @@ public:
         _Department = Department;
     }
 
-
-
     // override the print function
-    void PrintAllInfo(){ // redfine the print function to use it propely in subclass
-
-        cout<<"The Department is: "<<_Department<<endl;
-        cout<<"The Title is: "<<_Title<<endl;
-        cout<<"The Salary is: "<<_Salary<<endl;
+    void PrintAllInfo() // redfine the print function to use it propely in subclass
+    { 
+        // to access the OG print function in super class 
+        // Syntax : Super-class::TheNameOfMethod();
+         clsPerson::PrintAllInfo();
+        cout << "The Department is: " << _Department << endl;
+        cout << "The Title is: " << _Title << endl;
+        cout << "The Salary is: " << _Salary << endl;
     }
 };
 
@@ -165,9 +169,14 @@ class clsDoctors : public clsEmployee
 
 int main()
 {
-   
-    clsEmployee emp1(10,"osama","Mohamoud ", "wwwhj@ijd" , "1209","SW",13901,"Senior") ;
 
-   emp1.PrintAllInfo();
-   
+    clsEmployee emp1(10, "osama", "Mohamoud ", "wwwhj@ijd", "1209", "SW", 13901, "Senior");
+
+    emp1.PrintAllInfo(); // call the print method (i redfineded it in sub class )
+       // to access the OG print function in super class 
+       // obj(subclass).TheSuperClass :: Method Name();
+    emp1.clsPerson::PrintAllInfo(); // access the OG print function(defined OG in the base function)
+
+    clsPerson p1 (10,"ama","ala","2932AA@3.com","23023232"); // the print OG function(working perfectly)
+    p1.PrintAllInfo();
 }
