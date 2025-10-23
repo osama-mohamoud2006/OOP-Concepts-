@@ -79,12 +79,12 @@ public:
     void PrintAllInfo()
     {
         cout << "_______________________________\n";
-        cout << GetId() << endl;
-        cout << GetFirstName() << endl;
-        cout << GetLastName() << endl;
-        cout << PrintFullName() << endl;
-        cout << GetEmail() << endl;
-        cout << GetPhone() << endl;
+        cout << "ID: "<<GetId() << endl;
+        cout << "First name: "<<GetFirstName() << endl;
+        cout << "Last Name: "<<GetLastName() << endl;
+        cout << "Full Name: "<<PrintFullName() << endl;
+        cout << "Email: "<<GetEmail() << endl;
+        cout << "Phone: "<<GetPhone() << endl;
         // cout << "_______________________________\n";
     }
 
@@ -162,9 +162,12 @@ public:
     }
 };
 
-class clsDoctors : public clsEmployee
-{ // class inherited clsEmployee
+class clsDoctors : public clsPerson
+{ // class inherited clsPerson
   // it will inherit the clsPerson(From clsEmployee (sub class of clsPerson)) and clsEmployee
+
+
+
 };
 
 int main()
@@ -175,6 +178,7 @@ int main()
     emp1.PrintAllInfo(); // call the print method (i redfineded it in sub class )
        // to access the OG print function in super class 
        // obj(subclass).TheSuperClass :: Method Name();
+       cout<<"\n\n\n\n\n";
     emp1.clsPerson::PrintAllInfo(); // access the OG print function(defined OG in the base function)
 
     clsPerson p1 (10,"ama","ala","2932AA@3.com","23023232"); // the print OG function(working perfectly)
