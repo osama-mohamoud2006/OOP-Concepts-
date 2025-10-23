@@ -23,6 +23,15 @@ public:
         _Phone = Phone;
     }
 
+ clsPerson(int id, string FirstName, string LastName)
+    {
+        _Id = id;
+        _FirstName = FirstName;
+        _LastName = LastName;
+  
+    }
+
+
     // property set
     void SetFirstName(string FirstName)
     {
@@ -79,12 +88,12 @@ public:
     void PrintAllInfo()
     {
         cout << "_______________________________\n";
-        cout << "ID: "<<GetId() << endl;
-        cout << "First name: "<<GetFirstName() << endl;
-        cout << "Last Name: "<<GetLastName() << endl;
-        cout << "Full Name: "<<PrintFullName() << endl;
-        cout << "Email: "<<GetEmail() << endl;
-        cout << "Phone: "<<GetPhone() << endl;
+        cout << "ID: " << GetId() << endl;
+        cout << "First name: " << GetFirstName() << endl;
+        cout << "Last Name: " << GetLastName() << endl;
+        cout << "Full Name: " << PrintFullName() << endl;
+        cout << "Email: " << GetEmail() << endl;
+        cout << "Phone: " << GetPhone() << endl;
         // cout << "_______________________________\n";
     }
 
@@ -152,10 +161,10 @@ public:
 
     // override the print function
     void PrintAllInfo() // redfine the print function to use it propely in subclass
-    { 
-        // to access the OG print function in super class 
+    {
+        // to access the OG print function in super class
         // Syntax : Super-class::TheNameOfMethod();
-         clsPerson::PrintAllInfo();
+        clsPerson::PrintAllInfo();
         cout << "The Department is: " << _Department << endl;
         cout << "The Title is: " << _Title << endl;
         cout << "The Salary is: " << _Salary << endl;
@@ -163,11 +172,20 @@ public:
 };
 
 class clsDoctors : public clsPerson
-{ // class inherited clsPerson
-  // it will inherit the clsPerson(From clsEmployee (sub class of clsPerson)) and clsEmployee
+{
+    // class inherited clsPerson
+public:
+    clsDoctors(int id, string FirstName, string LastName) : clsPerson(id, FirstName, LastName )
+    {
+    }
 
-
-
+    /// @brief overriding//
+    void PrintAllInfo()
+    { // redfine the function
+        cout << "\nId: " << GetId() << endl;
+        cout << "Doctor Full Name: " << PrintFullName() << endl;
+        cout << "Phone: " << GetPhone() << endl;
+    }
 };
 
 int main()
@@ -176,11 +194,14 @@ int main()
     clsEmployee emp1(10, "osama", "Mohamoud ", "wwwhj@ijd", "1209", "SW", 13901, "Senior");
 
     emp1.PrintAllInfo(); // call the print method (i redfineded it in sub class )
-       // to access the OG print function in super class 
-       // obj(subclass).TheSuperClass :: Method Name();
-       cout<<"\n\n\n\n\n";
+    // to access the OG print function in super class
+    // obj(subclass).TheSuperClass :: Method Name();
+    cout << "\n\n\n\n\n";
     emp1.clsPerson::PrintAllInfo(); // access the OG print function(defined OG in the base function)
 
-    clsPerson p1 (10,"ama","ala","2932AA@3.com","23023232"); // the print OG function(working perfectly)
+    clsPerson p1(10, "ama", "ala", "2932AA@3.com", "23023232"); // the print OG function(working perfectly)
     p1.PrintAllInfo();
+
+    clsDoctors d1(100,"osama","ahmed");
+    d1.PrintAllInfo();
 }
