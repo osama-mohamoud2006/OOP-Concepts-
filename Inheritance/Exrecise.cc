@@ -120,8 +120,10 @@ public:
 class clsEmployee : public clsPerson
 {
 public:
-    clsEmployee(int id, string FirstName, string LastName, string Email, string Phone,
-                string department = "", int salary = 0, string title = "") : 
+    clsEmployee(int id, string FirstName, string LastName, // clsPerson
+               string Email, string Phone, //clsConnection
+                string department = "", int salary = 0, string title = "")//clsEmployee
+                 : 
                 clsPerson(id, FirstName, LastName)
     {
         _Department = department;
@@ -171,8 +173,6 @@ public:
     // override the print function
     void PrintAllInfo() // redfine the print function to use it propely in subclass
     {
-        // to access the OG print function in super class
-        // Syntax : Super-class::TheNameOfMethod();
         clsPerson::PrintAllInfo();
         cout << "The Department is: " << _Department << endl;
         cout << "The Title is: " << _Title << endl;
@@ -182,7 +182,7 @@ public:
 
 
 
-// sub class of cls person
+// sub class of cls Employees (multi level Inheritance)
 class clsPro : public clsEmployee
 {
     // title , salary , department , main programming language
