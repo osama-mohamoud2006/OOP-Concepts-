@@ -120,21 +120,20 @@ public:
 class clsEmployee : public clsPerson
 {
 public:
-    clsEmployee(int id, string FirstName, string LastName, // clsPerson
-               string Email, string Phone, //clsConnection
-                string department = "", int salary = 0, string title = "")//clsEmployee
-                 : 
-                clsPerson(id, FirstName, LastName)
+    clsEmployee(int id, string FirstName, string LastName,                 // clsPerson
+                string Email, string Phone,                                // clsConnection
+                string department = "", int salary = 0, string title = "") // clsEmployee
+        : clsPerson(id, FirstName, LastName)
     {
         _Department = department;
         _Salary = salary;
         _Title = title;
-         c.SetEmail(Email);
+        c.SetEmail(Email);
         c.SetPhone(Phone);
     }
 
 private:
-clsConnection c;
+    clsConnection c;
     string _Title;
     int _Salary;
     string _Department;
@@ -174,12 +173,13 @@ public:
     void PrintAllInfo() // redfine the print function to use it propely in subclass
     {
         clsPerson::PrintAllInfo();
+        cout<<"The Email is: "<<c.GetEmail()<<endl;
+        cout<<"The phone is: "<<c.GetPhone()<<endl;
         cout << "The Department is: " << _Department << endl;
         cout << "The Title is: " << _Title << endl;
         cout << "The Salary is: " << _Salary << endl;
     }
 };
-
 
 
 // sub class of cls Employees (multi level Inheritance)
@@ -189,35 +189,25 @@ class clsPro : public clsEmployee
 
 private:
     string _mainProgrammingLan;
-    
 
 public:
     // prametrized construtor to intialize the super class and the sub class
     clsPro(int id, string FirstName, string LastName, string Email, string Phone,
-                string department = "", int salary = 0, 
-                string title = "",
-            string mainProgrammingLan )     // for the dev-class                        
-        : clsEmployee(id, FirstName, LastName,Email,Phone,department,salary,title)
+           string department = "", int salary = 0,
+           string title = "",
+           string mainProgrammingLan) // for the dev-class
+        : clsEmployee(id, FirstName, LastName, Email, Phone, department, salary, title)
     {
-
-       
-       
         _mainProgrammingLan = mainProgrammingLan;
     }
 
     // set
-   
-
     void SetProLan(string PL)
     {
         _mainProgrammingLan = PL;
     }
 
-    
-
-   
-
-
+    // get
     string GetMainProgrammingLan()
     {
         return _mainProgrammingLan;
@@ -226,12 +216,7 @@ public:
     // override
     void PrintAllInfo()
     {
-        clsPerson::PrintAllInfo(); // call the print function in super class
-        cout << "The Email is: " <<c.GetEmail() << endl;
-        cout << "The Phone num is: " << c.GetPhone() << endl;
-        cout << "The Department is: " << GetDeparment() << endl;
-        cout << "The Title is: " << GetTitle() << endl;
-        cout << "The Salary is: " << GetSalary() << endl;
+        clsEmployee::PrintAllInfo(); // call the print function in super class(clsEmployee )
         cout << "The Main programming lang is: " << GetMainProgrammingLan() << endl;
     }
 };
