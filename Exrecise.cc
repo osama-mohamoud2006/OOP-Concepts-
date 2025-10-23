@@ -113,5 +113,19 @@ public:
 // sub class of cls person
 class clsPro : clsPerson
 {
-    
+// title , salary , department , main programming language 
+
+    private :
+    string _title;
+    int _salary ;
+    string _department;
+    string _mainProgrammingLan;
+
+    public:
+    clsPro(int id, string FirstName, string LastName, string Email, string Phone,
+    string title ,int salary , string deparment):
+    clsPerson(id,FirstName, LastName , Email , Phone)
+    {
+
+    }
 };
