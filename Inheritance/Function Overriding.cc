@@ -184,7 +184,7 @@ public:
     { // redfine the function
         cout << "\nId: " << GetId() << endl;
         cout << "Doctor Full Name: " << PrintFullName() << endl;
-        cout << "Phone: " << GetPhone() << endl;
+     
     }
 };
 
@@ -194,6 +194,8 @@ int main()
     clsEmployee emp1(10, "osama", "Mohamoud ", "wwwhj@ijd", "1209", "SW", 13901, "Senior");
 
     emp1.PrintAllInfo(); // call the print method (i redfineded it in sub class )
+
+    
     // to access the OG print function in super class
     // obj(subclass).TheSuperClass :: Method Name();
     cout << "\n\n\n\n\n";
