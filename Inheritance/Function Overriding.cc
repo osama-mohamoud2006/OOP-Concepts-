@@ -85,7 +85,7 @@ public:
         cout << PrintFullName() << endl;
         cout << GetEmail() << endl;
         cout << GetPhone() << endl;
-        cout << "_______________________________\n";
+       // cout << "_______________________________\n";
     }
 
     void SendEmail(string subject, string body)
@@ -106,7 +106,8 @@ public:
 class clsEmployee : public clsPerson
 { 
     public:
-    clsEmployee(int id, string FirstName, string LastName, string Email, string Phone):
+    clsEmployee(int id, string FirstName, string LastName, string Email, string Phone,
+    string department="" , int salary=0 , string title =""):
     clsPerson(id , FirstName ,LastName, Email , Phone ){
 
     }
@@ -149,7 +150,12 @@ public:
 
 
     // override the print function
-    void P
+    void PrintAllInfo(){ // redfine the print function to use it propely in subclass
+
+        cout<<"The Department is: "<<_Department<<endl;
+        cout<<"The Title is: "<<_Title<<endl;
+        cout<<"The Salary is: "<<_Salary<<endl;
+    }
 };
 
 class clsDoctors : public clsEmployee
@@ -159,5 +165,9 @@ class clsDoctors : public clsEmployee
 
 int main()
 {
+   
+    clsEmployee emp1(10,"osama","Mohamoud ", "wwwhj@ijd" , "1209","SW",13901,"Senior") ;
+
+   emp1.PrintAllInfo();
    
 }
