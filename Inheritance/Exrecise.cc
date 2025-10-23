@@ -207,5 +207,7 @@ int main()
     clsPro P2(2, "Omar", "Tarek", "Tester", 4000, "QA", "Python", "omar@mail.com", "456");
 
     P1.PrintAllInfo();
+    P1.GetId();
+
     P2.PrintAllInfo();
 }
