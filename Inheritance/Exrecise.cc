@@ -116,6 +116,69 @@ public:
     }
 };
 
+// Derived class , Sub class(from clsPerson)
+class clsEmployee : public clsPerson
+{
+public:
+    clsEmployee(int id, string FirstName, string LastName, string Email, string Phone,
+                string department = "", int salary = 0, string title = "") : 
+                clsPerson(id, FirstName, LastName)
+    {
+        _Department = department;
+        _Salary = salary;
+        _Title = title;
+    }
+
+private:
+    string _Title;
+    int _Salary;
+    string _Department;
+
+public:
+    // property get
+    string GetTitle()
+    {
+        return _Title;
+    }
+    int GetSalary()
+    {
+        return _Salary;
+    }
+    string GetDepartment()
+    {
+        return _Department;
+    }
+
+    // property set
+    void SetTitle(string title)
+    {
+        _Title = title;
+    }
+
+    void SetSalary(int salary)
+    {
+        _Salary = salary;
+    }
+
+    void SetDepartment(string Department)
+    {
+        _Department = Department;
+    }
+
+    // override the print function
+    void PrintAllInfo() // redfine the print function to use it propely in subclass
+    {
+        // to access the OG print function in super class
+        // Syntax : Super-class::TheNameOfMethod();
+        clsPerson::PrintAllInfo();
+        cout << "The Department is: " << _Department << endl;
+        cout << "The Title is: " << _Title << endl;
+        cout << "The Salary is: " << _Salary << endl;
+    }
+};
+
+
+
 // sub class of cls person
 class clsPro : public clsPerson
 {
@@ -145,42 +208,17 @@ public:
     }
 
     // set
-    void SetSalary(int salary)
-    {
-        _salary = salary;
-    }
-
-    void SetTitle(string title)
-    {
-        _title = title;
-    }
-
-    void SetDepartment(string department)
-    {
-        _department = department;
-    }
+   
 
     void SetProLan(string PL)
     {
         _mainProgrammingLan = PL;
     }
 
-    /// get
+    
 
-    string GetTitle()
-    {
-        return _title;
-    }
+   
 
-    string GetDeparment()
-    {
-        return _department;
-    }
-
-    int GetSalary()
-    {
-        return _salary;
-    }
 
     string GetMainProgrammingLan()
     {
