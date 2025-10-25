@@ -86,6 +86,12 @@ public:
     }
 };
 
+class clsManageEmployes : private clsEmployee
+{
+    // i will inherit all things from clsEmployee normally as it public inheritance visbility
+
+};
+
 int main()
 {
     /* From Super CLass (clsPersonInfo)
@@ -94,11 +100,12 @@ int main()
     string _ID;
     */
 
-    // clsEmployee inherited clsPersonInfo AS PUBLIC VISABILITY
+    // clsEmployee inherited clsPersonInfo AS PUBLIC VISIBILITY
     clsEmployee emp1("oda", "jack", "1932", "SW", "18345$");
     emp1.SetFirstName("Amany"); // --> From Super CLass (clsPersonInfo)
     emp1.SetLastName("Khair");  // --> From Super CLass (clsPersonInfo)
     emp1.SetID("198");          // --> From Super CLass (clsPersonInfo)
 
-
+    emp1.SetDepartment("SOFTWARE ENGINNERING"); // --> public method in clsEmployee
+    emp1.SetSalary("19321923$");                // --> public method in clsEmployee
 }
