@@ -132,6 +132,12 @@ class clsTest : protected clsManageEmployes
          // clsManageEmployes::SetLastName();//
         // inaccessible , as this class inherits from clsManageEmployes which was set as private inheritance visiblity
         /// soo you cann't access what it inherited
+
+        clsManageEmployes::GetID(); // it is accessible as it isn't inherited from classes like clsPersonInfo or clsEmployee or clsManageEmployes
+
+        // and it is protected and it is derivd class from clsManageEmployes so it is noraml
+
+        
     }
 };
 
