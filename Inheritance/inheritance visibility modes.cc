@@ -135,7 +135,11 @@ class clsTest : protected clsManageEmployes
 
         clsManageEmployes::GetID(); // it is accessible as it isn't inherited from classes like clsPersonInfo or clsEmployee or clsManageEmployes
 
-        // and it is protected and it is derivd class from clsManageEmployes so it is noraml
+        // and it is protected and this is derivd class from clsManageEmployes so it is noraml
+
+        /// protected visiblity when dervied class from it 
+        // it will access properities normally 
+        // but main can't access it 
     }
 
 protected:
@@ -183,7 +187,7 @@ int main()
 
 
     clsTest2 T2;
-    T2.ICanAccessProtectedFromClsTest();
+    T2.ICanAccessProtectedFromClsTest(); 
    
 
 
