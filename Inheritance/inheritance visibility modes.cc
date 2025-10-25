@@ -129,17 +129,23 @@ class clsTest : protected clsManageEmployes
 {
     void TestVis()
     {
-         // clsManageEmployes::SetLastName();//
+        // clsManageEmployes::SetLastName();//
         // inaccessible , as this class inherits from clsManageEmployes which was set as private inheritance visiblity
         /// soo you cann't access what it inherited
 
         clsManageEmployes::GetID(); // it is accessible as it isn't inherited from classes like clsPersonInfo or clsEmployee or clsManageEmployes
 
         // and it is protected and it is derivd class from clsManageEmployes so it is noraml
+    }
 
-        
+protected:
+    void SayHi()
+    {
+        cout << "Hi" << endl;
     }
 };
+
+class clsTest2:
 
 int main()
 {
@@ -163,4 +169,11 @@ int main()
     // m1.GetDepartment() --> inaccessible (clsEmployee)
     // m1.SetFirstName(""); --> inaccessible (clsPersonInfo)
     m1.GetManagerName(); // public method in clsManageEmployes
+
+    clsTest T1;
+    // T1.GetDepartment(); inaccessible (it is from clsEmployee and clsManageEmployes -the super class of clsTest and clsManageEmployes was set as private visiblity inheritance )
+
+    // T1.SayHi(); inaccessible as it is protected access modifier
+
+
 }
