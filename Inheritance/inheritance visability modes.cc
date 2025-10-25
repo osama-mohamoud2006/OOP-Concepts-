@@ -80,8 +80,9 @@ public:
         return _Department;
     }
 
-    void print(){
-        cout<<"The full name is: "<<GetFullName()<<endl; // this is protercted data member
+    void print()
+    {
+        cout << "The full name is: " << GetFullName() << endl; // this is protercted data member
     }
 };
 
@@ -93,6 +94,11 @@ int main()
     string _ID;
     */
 
-    clsEmployee emp1;
-    emp1.
+    // clsEmployee inherited clsPersonInfo AS PUBLIC VISABILITY
+    clsEmployee emp1("oda", "jack", "1932", "SW", "18345$");
+    emp1.SetFirstName("Amany"); // --> From Super CLass (clsPersonInfo)
+    emp1.SetLastName("Khair");  // --> From Super CLass (clsPersonInfo)
+    emp1.SetID("198");          // --> From Super CLass (clsPersonInfo)
+
+
 }
