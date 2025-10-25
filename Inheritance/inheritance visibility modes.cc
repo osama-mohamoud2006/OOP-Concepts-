@@ -145,7 +145,13 @@ protected:
     }
 };
 
-class clsTest2:
+class clsTest2: public clsTest{
+
+    public: void ICanAccessProtectedFromClsTest(){
+      SayHi(); // protetced method in clsTest
+    }
+
+};
 
 int main()
 {
@@ -174,6 +180,11 @@ int main()
     // T1.GetDepartment(); inaccessible (it is from clsEmployee and clsManageEmployes -the super class of clsTest and clsManageEmployes was set as private visiblity inheritance )
 
     // T1.SayHi(); inaccessible as it is protected access modifier
+
+
+    clsTest2 T2;
+    T2.ICanAccessProtectedFromClsTest();
+   
 
 
 }
