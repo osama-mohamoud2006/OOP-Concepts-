@@ -67,6 +67,9 @@ public:
         _Salary = salary;
     }
 
+    clsEmployee(){
+        
+    }
     void SetDepartment(string Department)
     {
         _Department = Department;
@@ -88,8 +91,33 @@ public:
 
 class clsManageEmployes : private clsEmployee
 {
-    // i will inherit all things from clsEmployee normally as it public inheritance visbility
+    ////////////(as clsEmployee is public inheritance visbility)//////////////
+    // i will inherit all things from clsEmployee normally
+    // and i can also access what the clsEmployee inherited from clsPersonInfo
+    /// what i said is belonging to this class only why?
+    // private visibility --> doesn't allow dervied class from this class access what i inherited perviously and main() also the same
 
+private:
+    string _MName;
+
+public:
+    clsManageEmployes()
+    {
+    }
+    clsManageEmployes(string Fname, string Lname, string ID,
+                      string department, string salary, string TheNameOfManager) : clsEmployee(Fname, Lname, ID, department, salary)
+    {
+        _MName = TheNameOfManager;
+    }
+
+    string GetManagerName()
+    { // make the _MName read only
+        return _MName;
+    }
+};
+
+class clsTestPrivateVisiblity : clsEmployee
+{
 };
 
 int main()
@@ -108,4 +136,10 @@ int main()
 
     emp1.SetDepartment("SOFTWARE ENGINNERING"); // --> public method in clsEmployee
     emp1.SetSalary("19321923$");                // --> public method in clsEmployee
+
+    // clsManageEmployes inherited clsEmployee AS PRIVATE VISIBILITY
+    clsManageEmployes m1("Joly", "Kada", "#10", "SW", "1291$", "jolt");
+    // m1.GetDepartment() --> inaccessible (clsEmployee)
+    // m1.SetFirstName(""); --> inaccessible (clsPersonInfo)
+    m1.GetManagerName(); // public method in clsManageEmployes
 }
