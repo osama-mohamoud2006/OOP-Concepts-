@@ -16,6 +16,9 @@ public: // accessible everywhere
         _LastName = Lname;
         _ID = ID;
     }
+    clsPersonInfo()
+    {
+    }
     // set
     void SetFirstName(string FName)
     {
@@ -67,8 +70,8 @@ public:
         _Salary = salary;
     }
 
-    clsEmployee(){
-        
+    clsEmployee()
+    {
     }
     void SetDepartment(string Department)
     {
@@ -114,10 +117,22 @@ public:
     { // make the _MName read only
         return _MName;
     }
+
+protected:
+    string GetID()
+    {
+        return clsPersonInfo::GetID();
+    }
 };
 
-class clsTestPrivateVisiblity : clsEmployee
+class clsTest : protected clsManageEmployes
 {
+    void TestVis()
+    {
+         // clsManageEmployes::SetLastName();//
+        // inaccessible , as this class inherits from clsManageEmployes which was set as private inheritance visiblity
+        /// soo you cann't access what it inherited
+    }
 };
 
 int main()
