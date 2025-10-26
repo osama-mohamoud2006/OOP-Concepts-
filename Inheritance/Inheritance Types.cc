@@ -30,18 +30,23 @@ public:
 };
 
 // single inheritance
-class clsPeople : public clsPerson
+class clsPeople : private clsPerson
 {
 
 public:
-    clsPeople()
+    void Set()
     {
-        SetFirstName("ahmed");
-        setLastname("Ali");
+        clsPerson::SetFirstName("ahmed");
+        clsPerson::setLastname("Ali");
     }
 
     string SinglePersonName()
     {
-        return GetFirstname() + " " + GetLastname();
+        return (GetFirstname() + " "+GetLastname());
     }
 };
+
+int main(){
+    clsPeople p1;
+    cout<< p1.SinglePersonName()<<endl;
+}
