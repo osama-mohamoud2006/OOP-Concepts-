@@ -139,7 +139,7 @@ class clsTest : protected clsManageEmployes
 
         /// protected visiblity when dervied class from it 
         // it will access properities normally 
-        // but main can't access it 
+        // but main can't access it
     }
 
 protected:
