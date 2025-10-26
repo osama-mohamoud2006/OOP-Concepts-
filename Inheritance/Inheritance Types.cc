@@ -34,19 +34,25 @@ class clsPeople : private clsPerson
 {
 
 public:
-    void Set()
+     clsPeople() // you should use constructors to assign values before return values
     {
-        clsPerson::SetFirstName("ahmed");
-        clsPerson::setLastname("Ali");
+        SetFirstName("ahmed");
+        setLastname("Ali");
     }
 
     string SinglePersonName()
     {
-        return (GetFirstname() + " "+GetLastname());
+        
+       return (GetFirstname() + " " + GetLastname());
+
+        
     }
 };
 
-int main(){
+int main()
+{
     clsPeople p1;
-    cout<< p1.SinglePersonName()<<endl;
+    cout << p1.SinglePersonName() << endl;
+
+
 }
