@@ -83,15 +83,15 @@ int main()
 
     clsMPeople m;
     m.SinglePersonName(); // public property in clsPeople,so i could i access it
-    // m.SetFirstName("");// inaccessible(from super class and the inheritance visibility mode is private so i couldn't access it)
+    // m.SetFirstName("");// inaccessible(from super class and the inheritance visibillity mode is private so i couldn't access it)
 
     m.Test();
 
-    D d1; //inheritance visibility mode is public//
+    D d1; //inheritance visibillity mode is public//
     d1.SetFirstName("Gaga");
     cout<<d1.GetFirstname()<<endl; 
 
-    C c1; //inheritance visibility mode is private//
+    C c1; //inheritance visibillity mode is private//
     //c1.SetFirstName("sasa");//
 
 
