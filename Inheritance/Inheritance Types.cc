@@ -88,14 +88,14 @@ public:
     }
 };
 
-class clsMultipleInheritance : public clsPerson, public clsSuper2
-{
-public:
-    // default constructor — base default constructors are called automatically
-    clsMultipleInheritance()
-    {
-    }
-};
+// class clsMultipleInheritance : public clsPerson, public clsSuper2
+// {
+// public:
+//     // default constructor — base default constructors are called automatically
+//     clsMultipleInheritance()
+//     {
+//     }
+// };
 
 int main()
 {
