@@ -87,11 +87,13 @@ int main()
 
     m.Test();
 
-    D d1; //inheritance visiblity mode is public//
+    D d1; //inheritance visibility mode is public//
     d1.SetFirstName("Gaga");
     cout<<d1.GetFirstname()<<endl; 
 
-    C c1; //inheritance visiblity mode is private//
+    C c1; //inheritance visibility mode is private//
     //c1.SetFirstName("sasa");//
+
+
 
 }
