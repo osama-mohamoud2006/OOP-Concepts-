@@ -60,6 +60,7 @@ public:
 
 // hierichal inheritance
 
+// 1 super class, many inherited classes
 class A : public clsPerson
 {
 };
@@ -76,6 +77,26 @@ class D : public clsPerson
 {
 };
 
+// multiple inheritance
+
+class clsSuper2
+{
+public:
+    clsSuper2()
+    {
+        cout << "\nIam Super Class2\n";
+    }
+};
+
+class clsMultipleInheritance : public clsPerson, public clsSuper2
+{
+public:
+    // default constructor — base default constructors are called automatically
+    clsMultipleInheritance()
+    {
+    }
+};
+
 int main()
 {
     clsPeople p1;
@@ -87,13 +108,10 @@ int main()
 
     m.Test();
 
-    D d1; //inheritance visibillity mode is public//
+    D d1; // inheritance visibillity mode is public//
     d1.SetFirstName("Gaga");
-    cout<<d1.GetFirstname()<<endl; 
+    cout << d1.GetFirstname() << endl;
 
-    C c1; //inheritance visibillity mode is private//
-    //c1.SetFirstName("sasa");//
-
-
-
+    C c1; // inheritance visibillity mode is private//
+    // c1.SetFirstName("sasa");//
 }
