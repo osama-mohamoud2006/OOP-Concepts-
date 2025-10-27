@@ -58,6 +58,9 @@ public:
     }
 };
 
+// hierichal inheritance
+
+
 
 
 int main()
