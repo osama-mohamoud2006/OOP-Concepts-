@@ -23,7 +23,7 @@ int main()
 {
     clsEmployee emp1;
 
-    // UpCasting
+              // UpCasting//
     // means casting from dervied class --> base class
     // We Will Use Pointers//
     clsPerson *UP = &emp1;
