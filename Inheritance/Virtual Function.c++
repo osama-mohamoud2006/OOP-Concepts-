@@ -19,7 +19,7 @@ class clsStudent : public clsPerson
 {
 public:
     // override
-    void print()
+    void prnt() override // override keyword is displaying errors messages if i made the override in the wrong way
     {
         cout << "Hello from sub class\n";
     }
