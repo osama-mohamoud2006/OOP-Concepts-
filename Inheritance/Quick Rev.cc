@@ -17,7 +17,8 @@ public:
     {
         cout << "HI" << endl;
     }
-    void SayHiIamClass()
+    // virtual --> to solve overriding problem
+    virtual void SayHiIamClass()
     {
         cout << "Hi iam base class :0)";
     }
@@ -36,7 +37,7 @@ public: // parametrized constructor intilize the base class and should be public
     }
 
     // overrided the SayHiIamClass() in super class
-    void SayHiIamClass () 
+    void SayHiIamClass() override // override key word is ensure that overriding done
     {
         cout << "Hi iam Sub class ;0)";
     }
@@ -45,6 +46,7 @@ public: // parametrized constructor intilize the base class and should be public
 int main()
 {
     clsStudent s1("osama", 19);
+    s1.SayHiIamClass(); // early binding
     // upcasting
     // syntax : base class * ptr = &subclass
     // inheritance should be public
@@ -56,9 +58,11 @@ int main()
     // if you applied overriding in your program you will face problem when using upcasting
 
     // the problem itself
-    clsPerson * ptr2 = & s1;
-    //ptr2->SayHiIamClass();// // it will call the method in base class although i overrided it (X)
+    clsPerson *ptr2 = &s1;
+    // ptr2->SayHiIamClass();// // it will call the method in base class although i overrided it (X)
 
-    
-
+    // i used virtual in base class
+    // dynamic binding //
+    clsPerson *ptr3 = &s1;
+    ptr3->SayHiIamClass(); // will call the overriden function
 }
