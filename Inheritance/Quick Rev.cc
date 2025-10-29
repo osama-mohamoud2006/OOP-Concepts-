@@ -46,7 +46,7 @@ public: // parametrized constructor intilize the base class and should be public
 int main()
 {
     clsStudent s1("osama", 19);
-    s1.SayHiIamClass(); // early binding
+    s1.SayHiIamClass(); // early/static binding
     // upcasting
     // syntax : base class * ptr = &subclass
     // inheritance should be public
@@ -62,7 +62,7 @@ int main()
     // ptr2->SayHiIamClass();// // it will call the method in base class although i overrided it (X)
 
     // i used virtual in base class
-    // dynamic binding //
+    // dynamic/late binding //
     clsPerson *ptr3 = &s1;
     ptr3->SayHiIamClass(); // will call the overriden function
 }
