@@ -16,14 +16,19 @@ public:
 };
 
 // sub class
-class clsStudent : clsPerson
+class clsStudent : public clsPerson
 {
+public:
+    clsStudent(string name, short age) : clsPerson(name, age)
+    {
+    }
 };
 
 int main()
 {
-    clsStudent s1;
+    clsStudent s1("osama", 19);
     // upcasting
     // syntax : base class * ptr = &subclass
+    // inheritance should be public
     clsPerson *ptr = &s1;
 }
