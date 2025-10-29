@@ -17,6 +17,10 @@ public:
     {
         cout << "HI" << endl;
     }
+    void SayHiIamClass()
+    {
+        cout << "Hi iam base class :0)";
+    }
 };
 
 // sub class
@@ -30,6 +34,12 @@ public: // parametrized constructor intilize the base class and should be public
     {
         cout << "Sybau" << endl;
     }
+
+    // overrided the SayHiIamClass() in super class
+    void SayHiIamClass () 
+    {
+        cout << "Hi iam Sub class ;0)";
+    }
 };
 
 int main()
@@ -39,7 +49,16 @@ int main()
     // syntax : base class * ptr = &subclass
     // inheritance should be public
     clsPerson *ptr = &s1;
-    ptr->SayHi(); // method in base class 
-    //ptr->SaySybau(); //
-    // inaccessible as it is in sub class not in base class and you have done upcasting to base class
+    ptr->SayHi(); // method in base class
+    // ptr->SaySybau(); //
+    //  inaccessible as it is in sub class not in base class and you have done upcasting to base class
+
+    // if you applied overriding in your program you will face problem when using upcasting
+
+    // the problem itself
+    clsPerson * ptr2 = & s1;
+    //ptr2->SayHiIamClass();// // it will call the method in base class although i overrided it (X)
+
+    
+
 }
