@@ -38,8 +38,9 @@ public:
         _LastName = Lname;
     }
 
-    void PrintHiIamClass()
+    virtual void PrintHiIamClass()
     {
+        cout << "hi iam super class!" << endl;
     }
     string PrintFullName()
     {
@@ -57,19 +58,34 @@ public:
     // overriding
     string PrintFullName()
     {
-        // call the function in base class 
+        // call the function in base class
         return "Welcome Student: " + clsPerson::PrintFullName();
+    }
+
+    // overriding + using virtual
+    void PrintHiIamClass() override
+    {
+        cout << "hi iam sub class!" << endl;
     }
 };
 int main()
 {
     // Polymorphism : one form different behaviour in different scenarios
+
+    // overloading
     print();
     print("osama");
     cout << print(19) << endl;
 
+    // operator overriding
     cout << SayHi() << endl;
 
+    // overriding
     clsStudent s1("Arya", "loka");
-    cout << s1.PrintFullName() << endl;
+    cout << s1.PrintFullName() << endl; // early binding
+
+    // late binding
+    // upcasing ///
+    clsPerson *ptr = &s1;
+    ptr->PrintHiIamClass();
 }
