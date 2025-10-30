@@ -31,7 +31,7 @@ public: // parametrized constructor intilize the base class and should be public
     clsStudent(string name, short age) : clsPerson(name, age)
     {
     }
-    void SaySybau()
+    void SayBou()
     {
         cout << "Sybau" << endl;
     }
