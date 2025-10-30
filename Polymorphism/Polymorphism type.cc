@@ -13,23 +13,63 @@ void print(string name)
 {
     cout << "Hi " << name << endl;
 }
-string print(short age)
+short print(short age)
 {
-    cout << "the age is: " << age << endl;
+    return age;
 }
 
 // operator overloading
 // Ex : + --> used for addition and add string together
-void SayHi(string name = "osama")
+string SayHi(string name = "osama")
 {
-    cout<<"hi "+name<<endl;
+    return "hi " + name;
 }
+
+class clsPerson
+{
+private:
+    string _FirstName;
+    string _LastName;
+
+public:
+    clsPerson(string Fname, string Lname)
+    {
+        _FirstName = Fname;
+        _LastName = Lname;
+    }
+
+    void PrintHiIamClass()
+    {
+    }
+    string PrintFullName()
+    {
+        return _FirstName + " " + _LastName;
+    }
+};
+// public --> inheritance visibility mode
+class clsStudent : public clsPerson
+{
+public:
+    clsStudent(string fname, string lname) : clsPerson(fname, lname)
+    {
+    }
+
+    // overriding
+    string PrintFullName()
+    {
+        // call the function in base class 
+        return "Welcome Student: " + clsPerson::PrintFullName();
+    }
+};
 int main()
 {
     // Polymorphism : one form different behaviour in different scenarios
     print();
     print("osama");
-    cout << print(19);
+    cout << print(19) << endl;
 
-    SayHi();
+    cout << SayHi() << endl;
+
+    clsStudent s1("Arya", "loka");
+    cout << s1.PrintFullName() << endl;
 }
