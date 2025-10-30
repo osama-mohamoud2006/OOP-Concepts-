@@ -52,7 +52,7 @@ int main()
     // inheritance should be public
     clsPerson *ptr = &s1;
     ptr->SayHi(); // method in base class
-    // ptr->SaySybau(); //
+    // ptr->SaySyBou(); //
     //  inaccessible as it is in sub class not in base class and you have done upcasting to base class
 
     // if you applied overriding in your program you will face problem when using upcasting
