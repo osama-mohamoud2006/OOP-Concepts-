@@ -18,9 +18,18 @@ string print(short age)
     cout << "the age is: " << age << endl;
 }
 
+// operator overloading
+// Ex : + --> used for addition and add string together
+void SayHi(string name = "osama")
+{
+    cout<<"hi "+name<<endl;
+}
 int main()
 {
+    // Polymorphism : one form different behaviour in different scenarios
     print();
     print("osama");
     cout << print(19);
+
+    SayHi();
 }
