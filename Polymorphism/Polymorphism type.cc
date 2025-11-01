@@ -87,5 +87,6 @@ int main()
     // late binding
     // upcasing ///
     clsPerson *ptr = &s1;
+    // used virtual function
     ptr->PrintHiIamClass();
 }

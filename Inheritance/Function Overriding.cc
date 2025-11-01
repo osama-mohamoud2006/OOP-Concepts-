@@ -84,7 +84,8 @@ public:
         return _FirstName + " " + _LastName;
     }
 
-public:
+
+    private:
     void PrintAllInfo()
     {
         cout << "_______________________________\n";
@@ -96,7 +97,7 @@ public:
         cout << "Phone: " << GetPhone() << endl;
         // cout << "_______________________________\n";
     }
-
+public:
     void SendEmail(string subject, string body)
     {
         cout << "\nthe following message to email: " << GetEmail() << endl;
@@ -199,10 +200,10 @@ int main()
     // to access the OG print function in super class
     // obj(subclass).TheSuperClass :: Method Name();
     cout << "\n\n\n\n\n";
-    emp1.clsPerson::PrintAllInfo(); // access the OG print function(defined OG in the base function)
+    //emp1.clsPerson::PrintAllInfo(); // access the OG print function(defined OG in the base function)
 
     clsPerson p1(10, "ama", "ala", "2932AA@3.com", "23023232"); // the print OG function(working perfectly)
-    p1.PrintAllInfo();
+    //p1.PrintAllInfo();
 
     clsDoctors d1(100,"osama","ahmed");
     d1.PrintAllInfo();
