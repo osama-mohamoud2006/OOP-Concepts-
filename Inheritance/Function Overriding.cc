@@ -84,8 +84,7 @@ public:
         return _FirstName + " " + _LastName;
     }
 
-
-    private:
+public:
     void PrintAllInfo()
     {
         cout << "_______________________________\n";
