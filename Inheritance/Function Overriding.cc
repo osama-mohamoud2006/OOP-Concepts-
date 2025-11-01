@@ -165,7 +165,7 @@ public:
     {
         // to access the OG print function in super class
         // Syntax : Super-class::TheNameOfMethod();
-        clsPerson::PrintAllInfo();
+        //clsPerson::PrintAllInfo();
         cout << "The Department is: " << _Department << endl;
         cout << "The Title is: " << _Title << endl;
         cout << "The Salary is: " << _Salary << endl;
