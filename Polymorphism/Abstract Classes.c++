@@ -49,7 +49,7 @@ public:
         _LastName = LastName;
     }
 
-    void Print() override
+    void Print() override // if the pure vf have args you must write them
     {
         cout << "The first name is: " << _FirstName << endl;
         cout << "The last name is: " << _LastName << endl;
