@@ -55,4 +55,7 @@ int main()
     s1.SetFirstName("opa");
     s1.SetLastName("loka");
     s1.Print();
+
+    s1.SetAge(19); // As the inheritance is public visibility mode , so i could access the methods the dervied class get from base class
+    s1.PrintAge();
 }
