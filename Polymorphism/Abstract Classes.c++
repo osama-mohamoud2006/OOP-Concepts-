@@ -10,7 +10,7 @@ class clsPerson
 public:
     clsPerson() // you can use constructors as usual
     {
-        // No args constructor 
+        // No args constructor
     }
     // these methods aren't pure virtual functions , so there is no need to implement it in dervied class
 private:
@@ -56,6 +56,10 @@ public:
     }
 };
 
+class clsEmp : clsPerson
+{
+    // it's Abstruct class as itsn't implemented the pure virtual functions
+};
 int main()
 {
     clsStudent s1; // you should implement the pure virtual functions in the dervied class to make object from class without any problem
@@ -66,4 +70,6 @@ int main()
 
     s1.SetAge(19); // As the inheritance is public visibility mode , so i could access the methods the dervied class get from base class
     s1.PrintAge();
+
+   
 }
