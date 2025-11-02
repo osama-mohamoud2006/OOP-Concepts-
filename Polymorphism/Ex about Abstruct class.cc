@@ -46,12 +46,23 @@ public:
     }
     void SetDepartName(string DepartmentName)
     {
-        _DepartmentName = _DepartmentName;
+        _DepartmentName = DepartmentName;
     }
 
-    void Print(){
-        cout<<"the department is: "<<_DepartmentName<<endl;
-        cout<<"the username is: "<<_user<<endl;
-        cout<<"the salary is: "<<+
+    void Print()
+    {
+        cout << "the department is: " << _DepartmentName << endl;
+        cout << "the id is: " << _id << endl;
+        cout << "the username is: " << _user << endl;
+        cout << "the salary is: " << _Salary << endl;
     }
 };
+
+int main(){
+    clsDoctor d1;
+    d1.SetUsername("1jio");
+    d1.SetId("23498");
+    d1.SetSalary(28424);
+    d1.SetDepartName("AI");
+    d1.Print();
+}
