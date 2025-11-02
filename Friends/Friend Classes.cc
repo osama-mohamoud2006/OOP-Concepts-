@@ -3,9 +3,12 @@ using namespace std;
 
 class clsCalac
 {
+    // you can type friend class anywhere in the class scope
+
 private:
     int _x;
     int _y;
+    int _a;
 
 protected:
     int c;
@@ -24,7 +27,9 @@ public:
         d = 12;
         l = 1019293;
         m = 1412;
+        _a = 213;
     }
+    friend class clsPrint; // i made the class clsPrint have the access to ALL DATA MEMBERS(Even if it is private or protected) -- دافع رشوه
 };
 
 class clsPrint
@@ -32,10 +37,10 @@ class clsPrint
 public:
     void display(clsCalac c)
     {
-        // cout << c.c << endl; // --> c is inaccessible (cuz it is protected member)
-        // cout << c.a << endl;// --> a is inaccessible (cuz it is protected data member)
-        // cout << c._x << endl; // --> _x is inaccessible (cuz it is private member)
-        cout << c.l << endl; // accessible as it is public data member
+        cout << c.c<< endl;  // --> c is  accessible (cuz it is friend class of clsCalac  )
+        cout << c._a << endl; // --> a is accessible (cuz it is friend class of clsCalac  )
+        cout << c._x << endl; // --> _x is accessible (cuz it is friend class of clsCalac )
+        cout << c.l << endl;  // accessible as it is public data member
     }
 };
 
@@ -44,4 +49,5 @@ int main()
     clsCalac v;
     clsPrint p;
     p.display(v);
+    p.
 }
