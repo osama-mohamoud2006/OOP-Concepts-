@@ -11,6 +11,7 @@ class clsPerson
 // dervied class
 class clsStudent : public clsPerson
 {
+    // you should implement the pure virtual functions in base class
 private:
     string _FirstName;
     string _LastName;
