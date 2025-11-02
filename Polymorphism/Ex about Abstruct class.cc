@@ -12,7 +12,7 @@ class clsProperites
 };
 
 // suppose it is college system
-class clsDoctor : clsProperites
+class clsDoctor : public clsProperites
 {
 private:
     string _DepartmentName;
@@ -58,11 +58,21 @@ public:
     }
 };
 
-int main(){
+class clsTest : public clsDoctor
+{ 
+    // although it inherited from clsDoctor which inherited Abstruct class
+     // I could make object normally 
+};
+
+int main()
+{
     clsDoctor d1;
     d1.SetUsername("1jio");
     d1.SetId("23498");
     d1.SetSalary(28424);
     d1.SetDepartName("AI");
     d1.Print();
+
+    clsTest t1;
+    t1.clsDoctor::Print();
 }
