@@ -15,7 +15,7 @@ class clsProperites
 class clsDoctor : clsProperites
 {
 private:
-    string _DepartName;
+    string _DepartmentName;
     double _Salary;
     string _id;
     string _user;
@@ -40,9 +40,18 @@ public:
         return _user;
     }
 
-    void SetSalart(double sum)
+    void SetSalary(double sum)
     {
         _Salary = sum;
     }
-    void 
+    void SetDepartName(string DepartmentName)
+    {
+        _DepartmentName = _DepartmentName;
+    }
+
+    void Print(){
+        cout<<"the department is: "<<_DepartmentName<<endl;
+        cout<<"the username is: "<<_user<<endl;
+        cout<<"the salary is: "<<+
+    }
 };
