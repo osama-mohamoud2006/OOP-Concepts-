@@ -7,6 +7,11 @@ class clsPerson
     // Abstract Class have pure virtual functions
     virtual void Print() = 0;
 
+public:
+    clsPerson() // you can use constructors as usual
+    {
+        // No args constructor 
+    }
     // these methods aren't pure virtual functions , so there is no need to implement it in dervied class
 private:
     short _age;
@@ -31,6 +36,9 @@ private:
     string _LastName;
 
 public:
+    clsStudent() : clsPerson()
+    {
+    }
     void SetFirstName(string FirstName)
     {
         _FirstName = FirstName;
