@@ -49,5 +49,8 @@ int main()
     clsCalac v;
     clsPrint p;
     p.display(v);
-    p.
+   
+   // v._a; // --> as usual you cann't access private data member in main 
+   // v.d ; // --> as usual you cann't access protected data member in main 
+
 }
