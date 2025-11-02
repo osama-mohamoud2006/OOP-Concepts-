@@ -6,6 +6,20 @@ class clsPerson
 {
     // Abstract Class have pure virtual functions
     virtual void Print() = 0;
+
+    // these methods aren't pure virtual functions , so there is no need to implement it in dervied class
+private:
+    short _age;
+
+public:
+    void SetAge(short age)
+    {
+        _age = age;
+    }
+    void PrintAge()
+    {
+        cout << "the age is: " << _age << endl;
+    }
 };
 
 // dervied class
