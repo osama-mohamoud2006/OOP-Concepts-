@@ -11,6 +11,7 @@
         "iostream": "cpp",
         "system_error": "cpp",
         "ostream": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "xmemory": "cpp"
     }
 }

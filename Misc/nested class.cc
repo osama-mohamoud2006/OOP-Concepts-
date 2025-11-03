@@ -18,9 +18,7 @@ private:
         string _StreetName;
 
     public:
-        clsAdderss()
-        {
-        }
+        // parameterized constructor
         clsAdderss(int strnum, string strname)
         {
             _StreetNum = strnum;
@@ -50,7 +48,9 @@ private:
     };
 
 public:
-    clsAdderss Address1;
+// to use para
+    clsAdderss address = clsAdderss(0,""); 
+
     clsPerson(string fname, string lname, short age, int StreetNum, string StreetName)
     {
         clsAdderss address(StreetNum, StreetName);
@@ -94,7 +94,6 @@ int main()
 {
     clsPerson p1("ahmed", "mohamoud", 34, 19, "New-Life");
     p1.PrintPersonData();
-    cout<<"____________________\n";
-    p1.Address1.PrintStreetData();
-
+    cout << "____________________\n";
+   
 }
