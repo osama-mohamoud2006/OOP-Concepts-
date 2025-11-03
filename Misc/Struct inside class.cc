@@ -27,16 +27,16 @@ private:
     // set
     // All these methods are pure virtual function in abstract class and should be implemented otherwise you wonot can make obj of this class
 
-    void SetFirstName(string fname)
+    void SetFirstName(string fname) override
     {
         d.firstname = fname;
     }
-    void SetLastName(string lname)
+    void SetLastName(string lname) override
     {
         d.lastname = lname;
     }
 
-    void SetAge(short age)
+    void SetAge(short age) override
     {
         d.age = age;
     }
@@ -83,16 +83,17 @@ private:
     }
     void FillPeresonData()
     {
-        clsPersonData P;
-        P.SetFirstName(read_string("Enter first name: "));
-        P.SetLastName(read_string("Enter last name: "));
-        P.SetAge(enter_postive_number("Enter age: "));
+
+        pd.SetFirstName(read_string("Enter first name: "));
+        pd.SetLastName(read_string("Enter last name: "));
+        pd.SetAge(enter_postive_number("Enter age: "));
     }
 
 public:
     // no args constructor
     FeaturesToDoOnPerson()
     {
+        FillPeresonData(); // fill the data
         WriteDataToFile(); // write to file if you make obj
     }
 
@@ -104,3 +105,9 @@ public:
         cout << "the age is: " << pd.GetAge() << endl;
     }
 };
+
+int main()
+{
+    FeaturesToDoOnPerson f1;
+    f1.Print();
+}
