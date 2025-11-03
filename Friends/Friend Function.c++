@@ -36,13 +36,17 @@ class clsOPerations
     int sub(int n1, int n2) { return n1 - n2; }
     bool ISN1SmallerThanN2(int n1, int n2) { return (n2 > n1) ? true : false; }
 
-    friend void Print(); // made the print() accessible all private methods here 
+    friend void Print(); // made the print() accessible all private methods here
 };
 
 void Print()
 {
+    // i made the print friend of 2 different classes
     clsCalac c;
     clsOPerations op;
+    cout << "The sum is: " << op.sum(c.Private1, c.Private2) << endl;
+    cout << "The sub is: " << op.sub(c.Protected1, c.Protected2) << endl;
+    cout << "Is n2>n2? " << op.ISN1SmallerThanN2(c.Public2, c.Public2) << endl;
 }
 
 int main()
