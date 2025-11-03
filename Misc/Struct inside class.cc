@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "E:\projects\my library\AllStuff.h"
 using namespace AllStuff;
 using namespace std;
@@ -57,15 +58,20 @@ public:
     {
         return d.age;
     }
-
-    friend void FillPeresonData();
 };
 
-void FillPeresonData()
+class FeaturesToDoOnPerson
 {
 
-    clsPersonData P;
-    P.SetFirstName(read_string("Enter first name: "));
-    P.SetLastName(read_string("Enter last name: "));
-    P.SetAge(enter_postive_number("Enter age: "));
-}
+    void FillPeresonData()
+    {
+        clsPersonData P;
+        P.SetFirstName(read_string("Enter first name: "));
+        P.SetLastName(read_string("Enter last name: "));
+        P.SetAge(enter_postive_number("Enter age: "));
+    }
+
+    void WriteDataToFile()
+    {
+    }
+};
