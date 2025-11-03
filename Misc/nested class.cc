@@ -18,6 +18,9 @@ private:
         string _StreetName;
 
     public:
+        clsAdderss()
+        {
+        }
         clsAdderss(int strnum, string strname)
         {
             _StreetNum = strnum;
@@ -42,10 +45,12 @@ private:
 
         void PrintStreetData()
         {
+            cout << "the street is: " << _StreetNum + "-" + _StreetName << endl;
         }
     };
 
 public:
+    clsAdderss Address1;
     clsPerson(string fname, string lname, short age, int StreetNum, string StreetName)
     {
         clsAdderss address(StreetNum, StreetName);
@@ -88,4 +93,8 @@ public:
 int main()
 {
     clsPerson p1("ahmed", "mohamoud", 34, 19, "New-Life");
+    p1.PrintPersonData();
+    cout<<"____________________\n";
+    p1.Address1.PrintStreetData();
+
 }
