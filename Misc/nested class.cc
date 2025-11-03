@@ -48,12 +48,13 @@ private:
     };
 
 public:
-// to use para
-    clsAdderss address = clsAdderss(0,""); 
+    // to use parameterized constructor(from inner class)
+    // class name obj = class name(your constructor parameters)
+    clsAdderss address = clsAdderss(0, "");
 
     clsPerson(string fname, string lname, short age, int StreetNum, string StreetName)
     {
-        clsAdderss address(StreetNum, StreetName);
+        clsAdderss address(StreetNum, StreetName); // assign values to parameters of clsAdderss class
         _FirsName = fname;
         _LastName = lname;
         _Age = age;
@@ -95,5 +96,5 @@ int main()
     clsPerson p1("ahmed", "mohamoud", 34, 19, "New-Life");
     p1.PrintPersonData();
     cout << "____________________\n";
-   
+    p1.address.PrintStreetData();
 }
