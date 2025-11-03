@@ -1,5 +1,5 @@
 #include <iostream>
-#include"E:\projects\my library\AllStuff.h"  
+#include "E:\projects\my library\AllStuff.h"
 using namespace AllStuff;
 using namespace std;
 // Abstract class ,Contract
@@ -10,6 +10,7 @@ class clsPropForPerson
     virtual void SetLastName(string Lname) = 0;
     virtual void SetAge(short age) = 0;
 };
+
 class clsPersonData : clsPropForPerson
 {
 private:
@@ -62,4 +63,9 @@ public:
 
 void FillPeresonData()
 {
+
+    clsPersonData P;
+    P.SetFirstName(read_string("Enter first name: "));
+    P.SetLastName(read_string("Enter last name: "));
+    P.SetAge(enter_postive_number("Enter age: "));
 }
