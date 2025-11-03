@@ -6,32 +6,32 @@ class clsCalac
     // you can type friend class anywhere in the class scope
 
 private:
-    int _x;
-    int _y;
-    int _a;
+    int Private1;
+    int Private2;
 
 protected:
-    int c;
-    int d;
+    int Protected1;
+    int Protected2;
 
 public:
-    int l;
-    int m;
+    int Public1;
+    int Public2;
 
 public:
     clsCalac()
     {
-        _x = 10;
-        _y = 200;
-        c = 19;
-        d = 12;
-        l = 1019293;
-        m = 1412;
-        _a = 213;
+        Private1 = 10;
+        Private2 = 200;
+        Protected1 = 19;
+        Protected2 = 12;
+        Public1 = 1019293;
+        Public2 = 1412;
+        
     }
-    friend void Print(); // i made the Function clsPrint have the access to ALL DATA MEMBERS(Even if it is private or protected) -- دافع رشوه
+  
 };
 
 void Print(){
-
+clsCalac c;
+  
 }
