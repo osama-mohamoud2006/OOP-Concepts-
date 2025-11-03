@@ -66,16 +66,6 @@ class FeaturesToDoOnPerson
 {
 private:
     clsPersonData pd;
-
-public:
-    void FillPeresonData()
-    {
-        clsPersonData P;
-        P.SetFirstName(read_string("Enter first name: "));
-        P.SetLastName(read_string("Enter last name: "));
-        P.SetAge(enter_postive_number("Enter age: "));
-    }
-
     void WriteDataToFile()
     {
         fstream WrtiteToFile;
@@ -86,7 +76,31 @@ public:
 
             WrtiteToFile << "the last name is: " << pd.GetLastName() << endl;
 
+            WrtiteToFile << "the full name is: " << pd.GetFullName() << endl;
+
             WrtiteToFile << "the age is: " << pd.GetAge() << endl;
         }
+    }
+    void FillPeresonData()
+    {
+        clsPersonData P;
+        P.SetFirstName(read_string("Enter first name: "));
+        P.SetLastName(read_string("Enter last name: "));
+        P.SetAge(enter_postive_number("Enter age: "));
+    }
+
+public:
+    // no args constructor
+    FeaturesToDoOnPerson()
+    {
+        WriteDataToFile(); // write to file if you make obj
+    }
+
+    void Print()
+    {
+        cout << "the first name is: " << pd.GetFirstName() << endl;
+        cout << "the last name is: " << pd.GetLastName() << endl;
+        cout << "the full name is: " << pd.GetFullName() << endl;
+        cout << "the age is: " << pd.GetAge() << endl;
     }
 };
