@@ -21,8 +21,30 @@ private:
 
 public:
     // set
+    // All these methods are pure virtual function in abstract class and should be implemented otherwise you wonot can make obj of this class
+
     void SetFirstName(string fname)
     {
         d.firstname = fname;
     }
+    void SetLastName(string lname)
+    {
+        d.lastname = lname;
+    }
+
+    void SetAge(short age)
+    {
+        d.age = age;
+    }
+
+    // Get
+    string GetFullName()
+    {
+        return d.firstname + " " + d.lastname;
+    }
+    string GetFirstName()
+    {
+        return d.firstname;
+    }
+    string 
 };
