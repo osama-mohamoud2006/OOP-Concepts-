@@ -79,6 +79,7 @@ private:
             WrtiteToFile << "the full name is: " << pd.GetFullName() << endl;
 
             WrtiteToFile << "the age is: " << pd.GetAge() << endl;
+            WrtiteToFile.close();
         }
     }
     void FillPeresonData()
@@ -86,7 +87,7 @@ private:
 
         pd.SetFirstName(read_string("Enter first name: "));
         pd.SetLastName(read_string("Enter last name: "));
-        pd.SetAge(enter_postive_number("Enter age: "));
+        pd.SetAge((short)enter_postive_number("Enter age: "));
     }
 
 public:
