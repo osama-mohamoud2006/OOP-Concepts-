@@ -62,7 +62,10 @@ public:
 
 class FeaturesToDoOnPerson
 {
+private:
+    clsPersonData pd;
 
+public:
     void FillPeresonData()
     {
         clsPersonData P;
@@ -73,5 +76,11 @@ class FeaturesToDoOnPerson
 
     void WriteDataToFile()
     {
+        fstream WrtiteToFile;
+        WrtiteToFile.open("person_data.text", ios::out);
+        if (WrtiteToFile.is_open())
+        {
+            WrtiteToFile << pd.GetFirstName() << endl;
+        }
     }
 };
