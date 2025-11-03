@@ -92,5 +92,20 @@ public:
 
 int main()
 {
-   
+    // you can make diff constructors with diff values with the same object
+
+    // class obj = class(args);
+    // obj = class(args2);
+    clsPerson p1 = clsPerson("", "", 0, 0, "");
+    p1 = clsPerson("ahmed", "mohamoud", 34, 19, "New-Life");
+
+    p1.PrintPersonData();
+    cout << "____________________\n";
+    p1.address.PrintStreetData();
+    cout << p1.address.StreetNum() << endl;
+
+    p1 = clsPerson("osaama", "mohamoud", 23, 10, "New-Capital");
+    cout << "____________________\n";
+    p1.address.PrintStreetData();
+    cout << p1.address.StreetNum() << endl;
 }
