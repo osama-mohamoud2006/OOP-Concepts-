@@ -30,20 +30,19 @@ public:
     friend void Print(); // so print function now can access the full access on data members of class
 };
 
-class clsOPerations{
-    int sum(int n1 , int n2){ return n1+n2;}
-    int sub(int n1 , int n2){return n1 - n2;}
-    bool ISN1SmallerThanN2(int n1 , int n2 ){return (n2>n1)? true : false ;}
+class clsOPerations
+{
+    int sum(int n1, int n2) { return n1 + n2; }
+    int sub(int n1, int n2) { return n1 - n2; }
+    bool ISN1SmallerThanN2(int n1, int n2) { return (n2 > n1) ? true : false; }
+
+    friend void Print(); // made the print() accessible all private methods here 
 };
 
 void Print()
 {
     clsCalac c;
-    clsOPerations
-    cout << c.Private1 << endl;   // you can't access it because it is friend function of class
-    cout << c.Protected1 << endl; // you can access it because it is friend function of class
-    cout << c.Public1 << endl;    // it is public data member so it is easy to access it
-    cout << c.Public2 << endl;
+    clsOPerations op;
 }
 
 int main()
