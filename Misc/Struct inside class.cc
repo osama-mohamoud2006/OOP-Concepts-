@@ -46,5 +46,11 @@ public:
     {
         return d.firstname;
     }
-    string 
+    string GetLastName()
+    {
+        return d.lastname;
+    }
+    short GetAge(){
+        return d.age;
+    }
 };
