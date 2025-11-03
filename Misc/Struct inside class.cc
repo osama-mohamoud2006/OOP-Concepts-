@@ -100,6 +100,7 @@ public:
 
     void Print()
     {
+        cout << "_______________________________\n";
         cout << "the first name is: " << pd.GetFirstName() << endl;
         cout << "the last name is: " << pd.GetLastName() << endl;
         cout << "the full name is: " << pd.GetFullName() << endl;
@@ -111,4 +112,5 @@ int main()
 {
     FeaturesToDoOnPerson f1;
     f1.Print();
+    
 }
