@@ -30,7 +30,15 @@ public:
     friend void Print(); // so print function now can access the full access on data members of class
 };
 
-class clsOPerations
+// Abstract class , Contract 
+class clsOpToDo
+{
+    // Pure virtual function
+    virtual int sum(int n1, int n2) = 0;
+    virtual int sub(int n1, int n2) = 0;
+    virtual bool ISN1SmallerThanN2(int n1, int n2) = 0;
+};
+class clsOPerations:clsOpToDo
 {
     int sum(int n1, int n2) { return n1 + n2; }
     int sub(int n1, int n2) { return n1 - n2; }
@@ -44,12 +52,14 @@ void Print()
     // i made the print friend of 2 different classes
     clsCalac c;
     clsOPerations op;
+    // i could use the private and protected data members of clsCalac normally
     cout << "The sum is: " << op.sum(c.Private1, c.Private2) << endl;
     cout << "The sub is: " << op.sub(c.Protected1, c.Protected2) << endl;
-    cout << "Is n2>n2? " << op.ISN1SmallerThanN2(c.Public2, c.Public2) << endl;
+    cout << "Is n2>n1? " << op.ISN1SmallerThanN2(c.Public2, c.Public2) << endl;
 }
 
 int main()
 {
     Print();
+    
 }
