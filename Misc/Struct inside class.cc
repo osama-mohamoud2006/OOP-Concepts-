@@ -1,4 +1,6 @@
 #include <iostream>
+#include"E:\projects\my library\AllStuff.h"  
+using namespace AllStuff;
 using namespace std;
 // Abstract class ,Contract
 class clsPropForPerson
@@ -50,7 +52,14 @@ public:
     {
         return d.lastname;
     }
-    short GetAge(){
+    short GetAge()
+    {
         return d.age;
     }
+
+    friend void FillPeresonData();
 };
+
+void FillPeresonData()
+{
+}
