@@ -23,7 +23,7 @@ private:
     };
     _stPersonData d;
 
-public:
+private:
     // set
     // All these methods are pure virtual function in abstract class and should be implemented otherwise you wonot can make obj of this class
 
@@ -41,6 +41,7 @@ public:
         d.age = age;
     }
 
+public:
     // Get
     string GetFullName()
     {
@@ -58,6 +59,7 @@ public:
     {
         return d.age;
     }
+    friend class FeaturesToDoOnPerson;
 };
 
 class FeaturesToDoOnPerson
@@ -80,7 +82,11 @@ public:
         WrtiteToFile.open("person_data.text", ios::out);
         if (WrtiteToFile.is_open())
         {
-            WrtiteToFile << pd.GetFirstName() << endl;
+            WrtiteToFile << "the first name is: " << pd.GetFirstName() << endl;
+
+            WrtiteToFile << "the last name is: " << pd.GetLastName() << endl;
+
+            WrtiteToFile << "the age is: " << pd.GetAge() << endl;
         }
     }
 };
