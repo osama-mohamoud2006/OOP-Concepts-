@@ -42,7 +42,13 @@ private:
     };
 
 public:
-    clsPerson()
+    clsPerson(string fname, string lname, short age ,int StreetNum,string StreetName )
     {
+        clsAdderss address(StreetNum,StreetName);
+        _FirsName=fname;
+        _LastName=lname;
+        _Age= age;
     }
+
+    void 
 };
