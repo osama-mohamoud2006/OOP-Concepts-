@@ -39,16 +39,53 @@ private:
         {
             return _StreetNum;
         }
+
+        void PrintStreetData()
+        {
+        }
     };
 
 public:
-    clsPerson(string fname, string lname, short age ,int StreetNum,string StreetName )
+    clsPerson(string fname, string lname, short age, int StreetNum, string StreetName)
     {
-        clsAdderss address(StreetNum,StreetName);
-        _FirsName=fname;
-        _LastName=lname;
-        _Age= age;
+        clsAdderss address(StreetNum, StreetName);
+        _FirsName = fname;
+        _LastName = lname;
+        _Age = age;
     }
 
-    void 
+    void SetFname(string fname)
+    {
+        _FirsName = fname;
+    }
+
+    void SetLname(string lname)
+    {
+        _LastName = lname;
+    }
+
+    void SetAge(short age)
+    {
+        _Age = age;
+    }
+
+    string GetFullName()
+    {
+        return _FirsName + " " + _LastName;
+    }
+    short GetAge()
+    {
+        return _Age;
+    }
+
+    void PrintPersonData()
+    {
+        cout << "the full name is: " << GetFullName() << endl;
+        cout << "the age is: " << GetAge() << endl;
+    }
 };
+
+int main()
+{
+    clsPerson p1("ahmed", "mohamoud", 34, 19, "New-Life");
+}
