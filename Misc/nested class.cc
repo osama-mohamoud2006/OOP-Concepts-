@@ -11,7 +11,7 @@ private:
     string _FirsName;
     string _LastName;
     short _Age;
-    class clsAdderss
+    class clsAddress
     {
     private:
         int _StreetNum;
@@ -19,7 +19,7 @@ private:
 
     public:
         // parameterized constructor
-        clsAdderss(int strnum, string strname)
+        clsAddress(int strnum, string strname)
         {
             _StreetNum = strnum;
             _StreetName = strname;
@@ -43,18 +43,17 @@ private:
 
         void PrintStreetData()
         {
-            cout << "the street is: " << _StreetNum + "-" + _StreetName << endl;
+            cout << "the street is: " << to_string(_StreetNum) + "-" + _StreetName << endl;
         }
     };
 
 public:
-    // to use parameterized constructor(from inner class)
+    clsAddress address = clsAddress(0, ""); // Initial the values of constructor (from inner class)
     // class name obj = class name(your constructor parameters)
-    clsAdderss address = clsAdderss(0, "");
 
     clsPerson(string fname, string lname, short age, int StreetNum, string StreetName)
     {
-        clsAdderss address(StreetNum, StreetName); // assign values to parameters of clsAdderss class
+        address=clsAddress(StreetNum, StreetName); // assign values to parameters of clsAdderss class
         _FirsName = fname;
         _LastName = lname;
         _Age = age;
@@ -93,8 +92,20 @@ public:
 
 int main()
 {
-    clsPerson p1("ahmed", "mohamoud", 34, 19, "New-Life");
+    // you can make diff constructors with diff values with the same object
+
+    // class obj = class(args);
+    // obj = class(args2);
+    clsPerson p1 = clsPerson("", "", 0, 0, "");
+    p1 = clsPerson("ahmed", "mohamoud", 34, 19, "New-Life");
+
     p1.PrintPersonData();
     cout << "____________________\n";
     p1.address.PrintStreetData();
+    cout << p1.address.StreetNum() << endl;
+
+    p1 = clsPerson("osaama", "mohamoud", 23, 10, "New-Capital");
+    cout << "____________________\n";
+    p1.address.PrintStreetData();
+    cout << p1.address.StreetNum() << endl;
 }
