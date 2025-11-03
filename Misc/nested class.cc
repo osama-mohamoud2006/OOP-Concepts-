@@ -8,17 +8,20 @@ using namespace std;
 class clsPerson
 {
 private:
+    string _FirsName;
+    string _LastName;
+    short _Age;
     class clsAdderss
     {
     private:
         int _StreetNum;
-        string _StreerName;
+        string _StreetName;
 
     public:
         clsAdderss(int strnum, string strname)
         {
             _StreetNum = strnum;
-            _StreerName = strname;
+            _StreetName = strname;
         }
         void SetStreetNum(int num)
         {
@@ -26,10 +29,20 @@ private:
         }
         void SetStreerName(string name)
         {
-            _StreerName = name;
+            _StreetName = name;
         }
-        string StreetName(){
-
+        string StreetName()
+        {
+            return _StreetName;
+        }
+        int StreetNum()
+        {
+            return _StreetNum;
         }
     };
+
+public:
+    clsPerson()
+    {
+    }
 };
