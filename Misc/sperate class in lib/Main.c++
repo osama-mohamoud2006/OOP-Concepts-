@@ -3,7 +3,11 @@
 using namespace std;
 
 int main(){
+
+    clsPerson p1 = clsPerson("","",0,0,"");
+    p1= clsPerson("lana","ahmed",19,12,"keko-newC");
     
-    clsPerson p1();
+    p1.PrintPersonData();
+    
 
 }
