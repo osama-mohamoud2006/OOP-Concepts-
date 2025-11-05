@@ -1,2 +1,3 @@
 ﻿  Debugging.cpp
+E:\projects\c++ course\10-OOP Concepts\Debugging\Debugging.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   Debugging.vcxproj -> E:\projects\c++ course\10-OOP Concepts\Debugging\x64\Debug\Debugging.exe

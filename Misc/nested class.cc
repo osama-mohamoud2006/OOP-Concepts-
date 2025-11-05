@@ -53,7 +53,7 @@ public:
 
     clsPerson(string fname, string lname, short age, int StreetNum, string StreetName)
     {
-        address=clsAddress(StreetNum, StreetName); // assign values to parameters of clsAdderss class
+        address = clsAddress(StreetNum, StreetName); // assign values to parameters of clsAdderss class
         _FirsName = fname;
         _LastName = lname;
         _Age = age;

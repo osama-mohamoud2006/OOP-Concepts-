@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include "clsPrint.h";
 using namespace std;
 
 class Student { 
@@ -34,4 +35,6 @@ int main() {
 	cout << "Age: " << Student1.Age << endl;
 
 
+	clsPrint p1;
+	p1.Print();
 }
