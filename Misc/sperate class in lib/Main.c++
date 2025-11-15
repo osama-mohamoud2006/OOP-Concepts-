@@ -1,5 +1,5 @@
 #include<iostream>
-#include"clsPerson.h";
+#include"clsPerson.h"
 using namespace std;
 
 int main(){
