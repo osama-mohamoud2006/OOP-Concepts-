@@ -4,15 +4,15 @@ using namespace std;
 class clsPerson
 {
 private:
-    string _FirstName;
+    string FirstName;
     string _lastName;
     static int count;
 
 public:
     clsPerson(string FirstName, string LastName)
     {
-        _FirstName = FirstName;
-        _lastName = LastName;
+        this->FirstName = FirstName; // if you wrote the same name
+        _lastName = LastName;// compiler will implement 'this' anyway
     }
     // s 1
 
@@ -20,7 +20,7 @@ public:
     // 'this' pointer is passed as hidden arg to all non-static functions
     void GetAllData()
     {
-        cout << "First name: " << this->_FirstName << endl; // you can use this-> poiner
+        cout << "First name: " << this->FirstName << endl; // you can use this-> poiner
         cout << "Last name: " << _lastName << endl;     // or compiler will use it implicitly
         cout << "count: " << count << endl;
     }
@@ -49,7 +49,7 @@ class clsTestFriend
     }
 };
 
-int clsPerson::count = 1; // initlize the static member
+int clsPerson::count = 0; // initlize the static member
 
 int main()
 {
