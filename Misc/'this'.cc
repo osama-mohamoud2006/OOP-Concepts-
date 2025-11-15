@@ -9,15 +9,17 @@ private:
     static int count;
     // s 1
 public:
-   clsPerson()
+   clsPerson(string FirstName , string LastName )
     {
+        _FirstName= FirstName;
+        _lastName=LastName;
     }
 
     void GetAllData()
     {
-        cout << _FirstName << endl;
-        cout << _lastName << endl;
-        cout << count << endl;
+        cout << "First name: "<<_FirstName << endl;
+        cout << "Last name: "<<_lastName << endl;
+        cout <<"count: "<<count << endl;
     }
 
  
@@ -32,10 +34,10 @@ public:
 };
 
 class clsTestFriend
-{
-    clsPerson p1;
+{ 
+    
     void Test(){
-       
+      clsPerson p1("osama","mohamoud");
     }
 
 };
@@ -44,4 +46,7 @@ int clsPerson::count = 0; // initlize the static member
 
 int main()
 {
+     clsPerson person1("osama","mohamoud");
+     person1.
+
 }
