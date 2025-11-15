@@ -46,6 +46,8 @@ public:
     }
     void CallGetPersonDetails()
     {
+        // 'this' only be used inside a nonstatic member function
+
         // GetPersonDetails() --> is static method , so it doesn't have 'this' pointer
         // so if you want to make static method access the non-static data members of obj
         // you should send '*this' as a parameter
@@ -54,9 +56,12 @@ public:
     }
 
     // s3
+    // you cann't use 'this' with friend class/function 
     friend class clsTestFriend;
+    friend void t();
 };
 
+void t(){}
 class clsTestFriend
 {
 public:
@@ -74,6 +79,8 @@ int main()
 {
     clsPerson person1("osama", "mohamoud");
    person1.CallGetPersonDetails();
+
+   
 
     // clsTestFriend t;
     // t.Test();
