@@ -7,15 +7,17 @@ private:
     string _FirstName;
     string _lastName;
     static int count;
-    // s 1
+
 public:
    clsPerson(string FirstName , string LastName )
     {
         _FirstName= FirstName;
         _lastName=LastName;
     }
+    // s 1
 
     // Nonn-Static function
+    // 'this' pointer is passed as hidden arg to all non-static functions
     void GetAllData()
     {
         cout << "First name: "<<_FirstName << endl;
