@@ -32,8 +32,8 @@ public:
 
     static void GetPersonDetails()
     {
-        count ++;
-        cout<<count<<endl;
+      
+       
     }
 
     // s3
@@ -54,14 +54,6 @@ int clsPerson::count = 0; // initlize the static member
 int main()
 {
     clsPerson person1("osama", "mohamoud");
-clsPerson person2("osama", "mohamoud");
-clsPerson person3("osama", "mohamoud");
-clsPerson person4("osama", "mohamoud");
-clsPerson person5("osama", "mohamoud");
-clsPerson person6("osama", "mohamoud");
-    clsPerson::GetPersonDetails();
-      clsPerson::GetPersonDetails();
-        clsPerson::GetPersonDetails();
-          clsPerson::GetPersonDetails();
-            clsPerson::GetPersonDetails();
+    
+
 }
