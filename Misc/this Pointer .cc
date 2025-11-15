@@ -42,7 +42,7 @@ public:
 
     static void GetPersonDetails(clsPerson PassThisOFObject)
     {
-        PassThisOFObject.GetAllData(); // non static method 
+        PassThisOFObject.GetAllData(); // non static method
     }
     void CallGetPersonDetails()
     {
@@ -50,7 +50,7 @@ public:
         // so if you want to make static method access the non-static data members
         // you should send '*this' as a parameter
 
-        GetPersonDetails(*this); // without it the static method will create new obj of 'PassThisOFObject' with new data , but with 'this' i will access the non static data members in the object 
+        GetPersonDetails(*this); // without it the static method will create new obj of 'PassThisOFObject' with new data , but with 'this' i will access the non-static data members in the object
     }
 
     // s3
@@ -59,10 +59,12 @@ public:
 
 class clsTestFriend
 {
-
+public:
     void Test()
     {
-        clsPerson p1("osama", "mohamoud");
+        clsPerson p1("l", "o");
+       
+        clsPerson::GetPersonDetails(p1);
     }
 };
 
@@ -71,5 +73,8 @@ int clsPerson::count = 0; // initlize the static member
 int main()
 {
     clsPerson person1("osama", "mohamoud");
-    person1.CallGetPersonDetails();
+   person1.CallGetPersonDetails();
+
+    // clsTestFriend t;
+    // t.Test();
 }
