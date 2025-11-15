@@ -28,9 +28,12 @@ public:
     // s2
     //satic method isn't belonging to any object (on the same class level)
     // it is shared between all objects (on the same class level)
-    // s
+    // static method doesn't have this pointer , so it cann't access non-static data members
+
     static void GetPersonDetails()
     {
+        count ++;
+        cout<<count<<endl;
     }
 
     // s3
@@ -46,10 +49,19 @@ class clsTestFriend
     }
 };
 
-int clsPerson::count = 0; // initlize the static member
+int clsPerson::count = 1; // initlize the static member
 
 int main()
 {
     clsPerson person1("osama", "mohamoud");
-    person1.GetAllData();
+clsPerson person2("osama", "mohamoud");
+clsPerson person3("osama", "mohamoud");
+clsPerson person4("osama", "mohamoud");
+clsPerson person5("osama", "mohamoud");
+clsPerson person6("osama", "mohamoud");
+    clsPerson::GetPersonDetails();
+      clsPerson::GetPersonDetails();
+        clsPerson::GetPersonDetails();
+          clsPerson::GetPersonDetails();
+            clsPerson::GetPersonDetails();
 }
