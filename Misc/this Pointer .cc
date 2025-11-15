@@ -47,7 +47,7 @@ public:
     void CallGetPersonDetails()
     {
         // GetPersonDetails() --> is static method , so it doesn't have 'this' pointer
-        // so if you want to make static method access the non-static data members
+        // so if you want to make static method access the non-static data members of obj
         // you should send '*this' as a parameter
 
         GetPersonDetails(*this); // without it the static method will create new obj of 'PassThisOFObject' with new data , but with 'this' i will access the non-static data members in the object
