@@ -15,6 +15,7 @@ public:
         _lastName=LastName;
     }
 
+    // Nonn-Static function
     void GetAllData()
     {
         cout << "First name: "<<_FirstName << endl;
@@ -47,6 +48,6 @@ int clsPerson::count = 0; // initlize the static member
 int main()
 {
      clsPerson person1("osama","mohamoud");
-     person1.
+     person1.GetAllData();
 
 }
