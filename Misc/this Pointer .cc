@@ -21,11 +21,14 @@ public:
     void GetAllData()
     {
         cout << "First name: " << this->_FirstName << endl; // you can use this-> poiner
-        cout << "Last name: " << _lastName << endl;        // or compiler will use it implicitly
+        cout << "Last name: " << _lastName << endl;     // or compiler will use it implicitly
         cout << "count: " << count << endl;
     }
 
     // s2
+    //satic method isn't belonging to any object (on the same class level)
+    // it is shared between all objects (on the same class level)
+    // s
     static void GetPersonDetails()
     {
     }
