@@ -6,7 +6,7 @@ int main()
 
     // static array
     const int l = 100; // compiler should know the length as const
-    int arr[l];        // will be defined in compile time
+    //int arr[l];        // will be defined in compile time
 
     // dynamic array
     int len = 12;
