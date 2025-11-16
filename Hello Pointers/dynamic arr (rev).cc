@@ -6,7 +6,7 @@ int main()
 
     // static array
     const int l = 100; // compiler should know the length as const
-    //int arr[l];        // will be defined in compile time
+    // int arr[l];        // will be defined in compile time
 
     // dynamic array
     int len = 12;
@@ -14,13 +14,13 @@ int main()
 
     for (int i = 0; i < 12; i++)
     {
-        *(Arr+i)=i+1;
+        *(Arr + i) = i + 1;
     }
 
-     for (int i = 0; i < 12; i++)
+    for (int i = 0; i < 12; i++)
     {
-       cout<< *(Arr+i)<<" ";
+        cout << *(Arr + i) << " ";
     }
 
-    delete []Arr;
+    delete[] Arr;
 }
