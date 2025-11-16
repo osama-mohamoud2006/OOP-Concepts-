@@ -7,7 +7,7 @@ class clsP
     string name;
 
 public:
-    clsP() // def constructor
+    clsP() // default constructor
     {
     }
     clsP(int value) // parametrized
@@ -25,7 +25,7 @@ public:
     }
     void Print(bool op2)
     {
-        cout << "name is: " << name;
+        cout << "name is: " << name<<endl;
         cout << "age is:" << x << endl;
     }
 };
@@ -60,6 +60,7 @@ int main()
     //     cout << endl;
     // }
 
+
     // dynamic array
 
     int len = 3;
@@ -67,13 +68,15 @@ int main()
 
     for (int i = 0; i < len; i++)
     {
-        arr3[i] = clsP(EnterAge(),  EnterName());
+        // you can edit array element :
+        //*(arr3+i) = clsP(EnterAge(),  EnterName());//  --> 1 
+        //OR
+        arr3[i]=clsP(EnterAge(),  EnterName());     // ---> 2
     }
-    
+
     cout << "______________________\n";
     for (int i = 0; i < len; i++)
     {
         arr3[i].Print(true);
-        cout << endl;
     }
 }
