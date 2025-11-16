@@ -11,7 +11,7 @@ public:
 clsT(){
 
 }
-    clsT(int i)
+    clsT(int i , int z , int m)
     {
         x = i;
     }
@@ -39,7 +39,7 @@ int main()
     for (int i = 0; i < 5; i++)
     {
         // pass values to constructor
-        Vclass.push_back(clsT(i + 1)); // push class to vector
+        Vclass.push_back(clsT(i, i+1,i+3)); // push class to vector
     }
 
     // access the 5 vectors and edit them
