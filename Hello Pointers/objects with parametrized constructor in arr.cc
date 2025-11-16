@@ -7,10 +7,8 @@ class clsP
     string name;
 
 public:
-
-    clsP() // def constructor 
+    clsP() // def constructor
     {
-
     }
     clsP(int value) // parametrized
     {
@@ -27,31 +25,55 @@ public:
     }
     void Print(bool op2)
     {
-        cout << "age is:" << x << endl;
         cout << "name is: " << name;
+        cout << "age is:" << x << endl;
     }
 };
 
+string EnterName()
+{
+    string name = "";
+    cout << "\nEnter name: ";
+    cin >> name;
+    return name;
+}
+
+short EnterAge()
+{
+    short age = 0;
+    cout << "\nEnter age: ";
+    cin >> age;
+    return age;
+}
+
 int main()
 {
-    // static array (data type : clsP(as class is data type) )
-    //  intializing 3 objects using parameterized constructor
-    clsP arr[] = {clsP(10), clsP(20), clsP(30)}; // pass value in parameterized constructor
-    clsP arr2[] = {
-        clsP(19, "osama"), clsP(20, "ahmed"), clsP(30, "omar")};
+    // // static array (data type : clsP(as class is data type) )
+    // //  intializing 3 objects using parameterized constructor
+    // clsP arr[] = {clsP(10), clsP(20), clsP(30)}; // pass value in parameterized constructor
+    // clsP arr2[] = {
+    //     clsP(19, "osama"), clsP(20, "ahmed"), clsP(30, "omar")};
 
-    for (clsP P : arr2)
-    {
-        P.Print(true);
-        cout << endl;
-    }
+    // for (clsP P : arr2)
+    // {
+    //     P.Print(true);
+    //     cout << endl;
+    // }
 
-    int len = 6;
+    // dynamic array
+
+    int len = 3;
     clsP *arr3 = new clsP[len]; // you should make no-args constructor to create this dynamic array
 
-    for(int i=0; i<len; i++){
-        
+    for (int i = 0; i < len; i++)
+    {
+        arr3[i] = clsP(EnterAge(),  EnterName());
     }
-
     
+    cout << "______________________\n";
+    for (int i = 0; i < len; i++)
+    {
+        arr3[i].Print(true);
+        cout << endl;
+    }
 }
