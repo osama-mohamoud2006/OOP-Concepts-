@@ -1228,6 +1228,7 @@
 
 #include "clsDate.h"
 #include "clsPeriod.h"
+
 using namespace std;
 int main() {
     clsDate d1(1,1,2025);
