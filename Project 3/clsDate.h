@@ -145,6 +145,7 @@ public:
     {
         return 24 * numberOFDays(y);
     }
+    
     int NumberOfHours() {
         return NumberOfHours(this->y);
     }
