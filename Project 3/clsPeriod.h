@@ -15,6 +15,7 @@ public:
 
         else return false; // p1=p2
     }
+
     bool is2PeriodsOverlaped( clsPeriod Period2) {
         return is2PeriodsOverlaped(*this,Period2);
     }

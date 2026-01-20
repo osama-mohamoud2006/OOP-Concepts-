@@ -1,5 +1,5 @@
-// cpp
 #pragma once
+
 #include <iostream>
 #include "E:\projects\c++ course\10-OOP Concepts\Project 2\Project 2\clsString.h"
 #include <string>
@@ -9,7 +9,6 @@
 #include <cmath>
 #include <ctime>
 
-using namespace  std;
 // Abstract class(contract)
 class clsDateFunctions {
     virtual   bool isLeap()=0;
@@ -75,6 +74,19 @@ public:
         this-> y= y;
     }
 
+    //Get 
+
+    short GetD() {
+        return this->d;
+    }
+
+    short GetM() {
+        return this->m;
+    }
+
+    short GetY() {
+        return this->y;
+    }
 
     static string numberToText(int num)
     {
@@ -488,6 +500,14 @@ public:
         return clsDate(date.d,date.m,date.y);
     }
 
+    static string GetLocalDateAndTime() 
+    {
+        time_t epoch_time = time(0);
+        tm* date_now = localtime(&epoch_time);
+        string time = to_string(date_now->tm_hour) +":" + to_string(date_now->tm_min)+":" + to_string(date_now->tm_sec);
+                       //  d/m/y + time 
+        return  (to_string(date_now->tm_mday)+"/" + to_string((date_now->tm_mon) + 1) +  "/" + to_string((date_now->tm_year) + 1900) + " - " + time);
+    }
 
     static  int yourAgeInDays(clsDate birthday, clsDate d1)
     {
